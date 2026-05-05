@@ -1,5 +1,5 @@
 Flow report for kurswork
-Sat Apr 25 10:34:29 2026
+Tue May 05 11:59:51 2026
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Flow Summary                                                            ;
 +-------------------------------+-----------------------------------------+
-; Flow Status                   ; Successful - Sat Apr 25 10:34:29 2026   ;
+; Flow Status                   ; Successful - Tue May 05 11:59:51 2026   ;
 ; Quartus II Version            ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name                 ; kurswork                                ;
-; Top-level Entity Name         ; regFlag                                 ;
+; Top-level Entity Name         ; ALU                                     ;
 ; Family                        ; Stratix II                              ;
 ; Met timing requirements       ; Yes                                     ;
-; Logic utilization             ; < 1 %                                   ;
-;     Combinational ALUTs       ; 2 / 12,480 ( < 1 % )                    ;
-;     Dedicated logic registers ; 4 / 12,480 ( < 1 % )                    ;
-; Total registers               ; 4                                       ;
-; Total pins                    ; 11 / 343 ( 3 % )                        ;
+; Logic utilization             ; 2 %                                     ;
+;     Combinational ALUTs       ; 148 / 12,480 ( 1 % )                    ;
+;     Dedicated logic registers ; 0 / 12,480 ( 0 % )                      ;
+; Total registers               ; 0                                       ;
+; Total pins                    ; 125 / 343 ( 36 % )                      ;
 ; Total virtual pins            ; 0                                       ;
 ; Total block memory bits       ; 0 / 419,328 ( 0 % )                     ;
 ; DSP block 9-bit elements      ; 0 / 96 ( 0 % )                          ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/25/2026 10:34:06 ;
+; Start date & time ; 05/05/2026 11:59:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; kurswork            ;
 +-------------------+---------------------+
@@ -75,12 +75,34 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 22072698233033.177710244501716 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 22072698233033.177797156801288 ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_FF                         ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_DECODE                     ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_MUX                        ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_BUSTRI                     ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_FF                         ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_DECODE                     ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_ADD_SUB                    ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_INV                        ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_XOR                        ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COMPARE                    ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_ADD_SUB                    ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_ADD_SUB                    ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_MUX                        ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_BUSTRI                     ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COMPARE                    ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_MUX                        ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
@@ -96,9 +118,31 @@ applicable agreement for further details.
 ; MISC_FILE                          ; lpm_bustri0.inc                ; --            ; --          ; --             ;
 ; MISC_FILE                          ; lpm_dff1.bsf                   ; --            ; --          ; --             ;
 ; MISC_FILE                          ; lpm_dff1.inc                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                    ; 16764057                       ; --            ; regFlag     ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                         ; --            ; regFlag     ; Top            ;
-; TOP_LEVEL_ENTITY                   ; regFlag                        ; kurswork      ; --          ; --             ;
+; MISC_FILE                          ; lpm_decode1.bsf                ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_decode1.inc                ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_add_sub0.bsf               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_add_sub0.inc               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_inv0.bsf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_inv0.inc                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_xor0.bsf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_xor0.inc                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_compare0.bsf               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_compare0.inc               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_add_sub1.bsf               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_add_sub1.inc               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_add_sub2.bsf               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_add_sub2.inc               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux1.bsf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux1.inc                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_bustri1.bsf                ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_bustri1.inc                ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_compare1.bsf               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_compare1.inc               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux2.bsf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux2.inc                   ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                       ; --            ; ALU         ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                         ; --            ; ALU         ; Top            ;
+; TOP_LEVEL_ENTITY                   ; ALU                            ; kurswork      ; --          ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                            ; --            ; --          ; eda_blast_fpga ;
 +------------------------------------+--------------------------------+---------------+-------------+----------------+
 
@@ -108,11 +152,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:06     ; 1.0                     ; 168 MB              ; 00:00:02                           ;
-; Fitter                  ; 00:00:09     ; 1.0                     ; 197 MB              ; 00:00:06                           ;
-; Assembler               ; 00:00:02     ; 1.0                     ; 144 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 110 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:18     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Synthesis    ; 00:00:09     ; 1.0                     ; 177 MB              ; 00:00:05                           ;
+; Fitter                  ; 00:00:08     ; 1.0                     ; 186 MB              ; 00:00:05                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 160 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 88 MB               ; 00:00:00                           ;
+; Total                   ; 00:00:20     ; --                      ; --                  ; 00:00:11                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

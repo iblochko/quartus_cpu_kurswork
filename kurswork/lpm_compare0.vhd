@@ -44,6 +44,7 @@ ENTITY lpm_compare0 IS
 	(
 		dataa		: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
 		datab		: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
+		AeB		: OUT STD_LOGIC ;
 		AlB		: OUT STD_LOGIC 
 	);
 END lpm_compare0;
@@ -52,6 +53,7 @@ END lpm_compare0;
 ARCHITECTURE SYN OF lpm_compare0 IS
 
 	SIGNAL sub_wire0	: STD_LOGIC ;
+	SIGNAL sub_wire1	: STD_LOGIC ;
 
 
 
@@ -64,12 +66,14 @@ ARCHITECTURE SYN OF lpm_compare0 IS
 	PORT (
 			dataa	: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
 			datab	: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
-			AlB	: OUT STD_LOGIC 
+			AlB	: OUT STD_LOGIC ;
+			AeB	: OUT STD_LOGIC 
 	);
 	END COMPONENT;
 
 BEGIN
 	AlB    <= sub_wire0;
+	AeB    <= sub_wire1;
 
 	lpm_compare_component : lpm_compare
 	GENERIC MAP (
@@ -80,7 +84,8 @@ BEGIN
 	PORT MAP (
 		dataa => dataa,
 		datab => datab,
-		AlB => sub_wire0
+		AlB => sub_wire0,
+		AeB => sub_wire1
 	);
 
 
@@ -90,14 +95,14 @@ END SYN;
 -- ============================================================
 -- CNX file retrieval info
 -- ============================================================
--- Retrieval info: PRIVATE: AeqB NUMERIC "0"
+-- Retrieval info: PRIVATE: AeqB NUMERIC "1"
 -- Retrieval info: PRIVATE: AgeB NUMERIC "0"
 -- Retrieval info: PRIVATE: AgtB NUMERIC "0"
 -- Retrieval info: PRIVATE: AleB NUMERIC "0"
 -- Retrieval info: PRIVATE: AltB NUMERIC "1"
 -- Retrieval info: PRIVATE: AneB NUMERIC "0"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Stratix II"
--- Retrieval info: PRIVATE: LPM_PIPELINE NUMERIC "0"
+-- Retrieval info: PRIVATE: LPM_PIPELINE NUMERIC "1"
 -- Retrieval info: PRIVATE: Latency NUMERIC "0"
 -- Retrieval info: PRIVATE: PortBValue NUMERIC "0"
 -- Retrieval info: PRIVATE: Radix NUMERIC "10"
@@ -110,9 +115,11 @@ END SYN;
 -- Retrieval info: CONSTANT: LPM_REPRESENTATION STRING "UNSIGNED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COMPARE"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "13"
+-- Retrieval info: USED_PORT: AeB 0 0 0 0 OUTPUT NODEFVAL AeB
 -- Retrieval info: USED_PORT: AlB 0 0 0 0 OUTPUT NODEFVAL AlB
 -- Retrieval info: USED_PORT: dataa 0 0 13 0 INPUT NODEFVAL dataa[12..0]
 -- Retrieval info: USED_PORT: datab 0 0 13 0 INPUT NODEFVAL datab[12..0]
+-- Retrieval info: CONNECT: AeB 0 0 0 0 @AeB 0 0 0 0
 -- Retrieval info: CONNECT: AlB 0 0 0 0 @AlB 0 0 0 0
 -- Retrieval info: CONNECT: @dataa 0 0 13 0 dataa 0 0 13 0
 -- Retrieval info: CONNECT: @datab 0 0 13 0 datab 0 0 13 0
