@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Stratix II"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY SP
+set_global_assignment -name TOP_LEVEL_ENTITY RAM
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:44:45  APRIL 23, 2026"
 set_global_assignment -name LAST_QUARTUS_VERSION 9.1
@@ -72,10 +72,6 @@ set_global_assignment -name QIP_FILE lpm_mux2.qip
 set_global_assignment -name BDF_FILE PC.bdf
 set_global_assignment -name QIP_FILE lpm_counter0.qip
 set_global_assignment -name BDF_FILE SP.bdf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name QIP_FILE lpm_dff2.qip
 set_global_assignment -name QIP_FILE lpm_add_sub3.qip
 set_global_assignment -name QIP_FILE lpm_mux3.qip
@@ -83,4 +79,12 @@ set_global_assignment -name QIP_FILE lpm_constant0.qip
 set_global_assignment -name QIP_FILE lpm_compare2.qip
 set_global_assignment -name QIP_FILE lpm_compare3.qip
 set_global_assignment -name QIP_FILE lpm_bustri2.qip
+set_global_assignment -name BDF_FILE RAM.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name MIF_FILE ROM.mif
+set_global_assignment -name BDF_FILE ROM.bdf
+set_global_assignment -name MIF_FILE RAM.mif
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
