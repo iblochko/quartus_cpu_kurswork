@@ -1,0 +1,51 @@
+|regFlag
+CF <= f[3].DB_MAX_OUTPUT_PORT_TYPE
+clk => inst1.IN0
+FlagWrite => inst1.IN1
+CF_in => lpm_dff1:inst.data[3]
+ZF_in => lpm_dff1:inst.data[2]
+OF_in => lpm_dff1:inst.data[1]
+SF_in => lpm_dff1:inst.data[0]
+ZF <= f[2].DB_MAX_OUTPUT_PORT_TYPE
+OF <= f[1].DB_MAX_OUTPUT_PORT_TYPE
+SF <= f[0].DB_MAX_OUTPUT_PORT_TYPE
+JBZ_cond <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|regFlag|lpm_dff1:inst
+clock => lpm_ff:lpm_ff_component.clock
+data[0] => lpm_ff:lpm_ff_component.data[0]
+data[1] => lpm_ff:lpm_ff_component.data[1]
+data[2] => lpm_ff:lpm_ff_component.data[2]
+data[3] => lpm_ff:lpm_ff_component.data[3]
+q[0] <= lpm_ff:lpm_ff_component.q[0]
+q[1] <= lpm_ff:lpm_ff_component.q[1]
+q[2] <= lpm_ff:lpm_ff_component.q[2]
+q[3] <= lpm_ff:lpm_ff_component.q[3]
+
+
+|regFlag|lpm_dff1:inst|lpm_ff:lpm_ff_component
+data[0] => dffs[0].DATAIN
+data[1] => dffs[1].DATAIN
+data[2] => dffs[2].DATAIN
+data[3] => dffs[3].DATAIN
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
