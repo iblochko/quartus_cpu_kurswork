@@ -1123,9 +1123,9 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 440024;
+		ZEND = 220012;
 		NUMERATOR = 1162;
-		DENOMINATOR = 440024;
+		DENOMINATOR = 220012;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -1153,7 +1153,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCinc";
+		SIGNAL = "SPdec";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -1161,7 +1161,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCLoad";
+		SIGNAL = "SPinc";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -1169,7 +1169,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCin";
+		SIGNAL = "SPout";
 		INDEX = 4;
 		FORMAT = T;
 		SCALE = 1;
@@ -1177,7 +1177,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCin[8]";
+		SIGNAL = "SPout[8]";
 		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
@@ -1185,7 +1185,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCin[7]";
+		SIGNAL = "SPout[7]";
 		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
@@ -1193,7 +1193,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCin[6]";
+		SIGNAL = "SPout[6]";
 		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
@@ -1201,7 +1201,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCin[5]";
+		SIGNAL = "SPout[5]";
 		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
@@ -1209,7 +1209,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCin[4]";
+		SIGNAL = "SPout[4]";
 		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
@@ -1217,7 +1217,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCin[3]";
+		SIGNAL = "SPout[3]";
 		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
@@ -1225,7 +1225,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCin[2]";
+		SIGNAL = "SPout[2]";
 		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
@@ -1233,7 +1233,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCin[1]";
+		SIGNAL = "SPout[1]";
 		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
@@ -1241,7 +1241,7 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCin[0]";
+		SIGNAL = "SPout[0]";
 		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
@@ -1249,80 +1249,16 @@ VECTOR("Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/kurswork.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCout";
+		SIGNAL = "StackOverflow";
 		INDEX = 14;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PCout[8]";
+		SIGNAL = "StackUnderflow";
 		INDEX = 15;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "PCout[7]";
-		INDEX = 16;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "PCout[6]";
-		INDEX = 17;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "PCout[5]";
-		INDEX = 18;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "PCout[4]";
-		INDEX = 19;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "PCout[3]";
-		INDEX = 20;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "PCout[2]";
-		INDEX = 21;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "PCout[1]";
-		INDEX = 22;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "PCout[0]";
-		INDEX = 23;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
