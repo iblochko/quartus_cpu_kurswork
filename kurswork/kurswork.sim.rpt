@@ -1,5 +1,5 @@
 Simulator report for kurswork
-Tue May 05 19:08:24 2026
+Wed May 06 10:22:14 2026
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -10,13 +10,12 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
   2. Simulator Summary
   3. Simulator Settings
   4. Simulation Waveforms
-  5. |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ALTSYNCRAM
-  6. Coverage Summary
-  7. Complete 1/0-Value Coverage
-  8. Missing 1-Value Coverage
-  9. Missing 0-Value Coverage
- 10. Simulator INI Usage
- 11. Simulator Messages
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
 
 
 
@@ -46,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 63 nodes     ;
-; Simulation Coverage         ;      25.81 % ;
-; Total Number of Transitions ; 190          ;
+; Simulation Netlist Size     ; 185 nodes    ;
+; Simulation Coverage         ;      43.24 % ;
+; Total Number of Transitions ; 343          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Stratix II   ;
 +-----------------------------+--------------+
@@ -89,159 +88,276 @@ Waveform report data cannot be output to ASCII.
 Please use Quartus II to view the waveform report data.
 
 
-+---------------------------------------------------------------------------------------------+
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ALTSYNCRAM ;
-+---------------------------------------------------------------------------------------------+
-Please refer to fitter text-based report (*.fit.rpt) to view logical memory report content in ASCII.
-
-
 +--------------------------------------------------------------------+
 ; Coverage Summary                                                   ;
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      25.81 % ;
-; Total nodes checked                                 ; 63           ;
-; Total output ports checked                          ; 62           ;
-; Total output ports with complete 1/0-value coverage ; 16           ;
+; Total coverage as a percentage                      ;      43.24 % ;
+; Total nodes checked                                 ; 185          ;
+; Total output ports checked                          ; 185          ;
+; Total output ports with complete 1/0-value coverage ; 80           ;
 ; Total output ports with no 1/0-value coverage       ; 45           ;
-; Total output ports with no 1-value coverage         ; 46           ;
-; Total output ports with no 0-value coverage         ; 45           ;
+; Total output ports with no 1-value coverage         ; 45           ;
+; Total output ports with no 0-value coverage         ; 105          ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                                                                                                                ;
-+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                                     ; Output Port Name                                                                        ; Output Port Type ;
-+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+
-; |RAM|DataOut[2]                                                                               ; |RAM|DataOut[2]                                                                         ; pin_out          ;
-; |RAM|DataOut[1]                                                                               ; |RAM|DataOut[1]                                                                         ; pin_out          ;
-; |RAM|DataOut[0]                                                                               ; |RAM|DataOut[0]                                                                         ; pin_out          ;
-; |RAM|clk                                                                                      ; |RAM|clk                                                                                ; out              ;
-; |RAM|Addr[2]                                                                                  ; |RAM|Addr[2]                                                                            ; out              ;
-; |RAM|Addr[1]                                                                                  ; |RAM|Addr[1]                                                                            ; out              ;
-; |RAM|Addr[0]                                                                                  ; |RAM|Addr[0]                                                                            ; out              ;
-; |RAM|lpm_rom:inst|otri[2]                                                                     ; |RAM|lpm_rom:inst|otri[2]                                                               ; out              ;
-; |RAM|lpm_rom:inst|otri[1]                                                                     ; |RAM|lpm_rom:inst|otri[1]                                                               ; out              ;
-; |RAM|lpm_rom:inst|otri[0]                                                                     ; |RAM|lpm_rom:inst|otri[0]                                                               ; out              ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a0 ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[0] ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a1 ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[1] ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a2 ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[2] ; portadataout0    ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[2]                                ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[2]                          ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[1]                                ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[1]                          ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[0]                                ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[0]                          ; out              ;
-+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
+; Node Name                                                  ; Output Port Name                                           ; Output Port Type ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
+; |cash_line|V_out                                           ; |cash_line|V_out                                           ; pin_out          ;
+; |cash_line|clk                                             ; |cash_line|clk                                             ; out              ;
+; |cash_line|WriteEn                                         ; |cash_line|WriteEn                                         ; out              ;
+; |cash_line|V_in                                            ; |cash_line|V_in                                            ; out              ;
+; |cash_line|D_in                                            ; |cash_line|D_in                                            ; out              ;
+; |cash_line|LRU_in[1]                                       ; |cash_line|LRU_in[1]                                       ; out              ;
+; |cash_line|LRU_in[0]                                       ; |cash_line|LRU_in[0]                                       ; out              ;
+; |cash_line|Tag_in[4]                                       ; |cash_line|Tag_in[4]                                       ; out              ;
+; |cash_line|Tag_in[3]                                       ; |cash_line|Tag_in[3]                                       ; out              ;
+; |cash_line|Tag_in[2]                                       ; |cash_line|Tag_in[2]                                       ; out              ;
+; |cash_line|Tag_in[1]                                       ; |cash_line|Tag_in[1]                                       ; out              ;
+; |cash_line|Tag_in[0]                                       ; |cash_line|Tag_in[0]                                       ; out              ;
+; |cash_line|Data_out[0][9]                                  ; |cash_line|Data_out[0][9]                                  ; pin_out          ;
+; |cash_line|Data_out[0][7]                                  ; |cash_line|Data_out[0][7]                                  ; pin_out          ;
+; |cash_line|Data_out[0][6]                                  ; |cash_line|Data_out[0][6]                                  ; pin_out          ;
+; |cash_line|Data_out[0][3]                                  ; |cash_line|Data_out[0][3]                                  ; pin_out          ;
+; |cash_line|Data_out[0][2]                                  ; |cash_line|Data_out[0][2]                                  ; pin_out          ;
+; |cash_line|Data_out[0][1]                                  ; |cash_line|Data_out[0][1]                                  ; pin_out          ;
+; |cash_line|Data_out[1][6]                                  ; |cash_line|Data_out[1][6]                                  ; pin_out          ;
+; |cash_line|Data_out[2][8]                                  ; |cash_line|Data_out[2][8]                                  ; pin_out          ;
+; |cash_line|Data_out[2][5]                                  ; |cash_line|Data_out[2][5]                                  ; pin_out          ;
+; |cash_line|Data_out[2][3]                                  ; |cash_line|Data_out[2][3]                                  ; pin_out          ;
+; |cash_line|Data_out[2][1]                                  ; |cash_line|Data_out[2][1]                                  ; pin_out          ;
+; |cash_line|Data_out[3][10]                                 ; |cash_line|Data_out[3][10]                                 ; pin_out          ;
+; |cash_line|Data_out[3][5]                                  ; |cash_line|Data_out[3][5]                                  ; pin_out          ;
+; |cash_line|Data_out[3][1]                                  ; |cash_line|Data_out[3][1]                                  ; pin_out          ;
+; |cash_line|Data_in[0][12]                                  ; |cash_line|Data_in[0][12]                                  ; out              ;
+; |cash_line|Data_in[0][9]                                   ; |cash_line|Data_in[0][9]                                   ; out              ;
+; |cash_line|Data_in[0][8]                                   ; |cash_line|Data_in[0][8]                                   ; out              ;
+; |cash_line|Data_in[0][7]                                   ; |cash_line|Data_in[0][7]                                   ; out              ;
+; |cash_line|Data_in[0][6]                                   ; |cash_line|Data_in[0][6]                                   ; out              ;
+; |cash_line|Data_in[0][4]                                   ; |cash_line|Data_in[0][4]                                   ; out              ;
+; |cash_line|Data_in[0][3]                                   ; |cash_line|Data_in[0][3]                                   ; out              ;
+; |cash_line|Data_in[0][2]                                   ; |cash_line|Data_in[0][2]                                   ; out              ;
+; |cash_line|Data_in[0][1]                                   ; |cash_line|Data_in[0][1]                                   ; out              ;
+; |cash_line|Data_in[0][0]                                   ; |cash_line|Data_in[0][0]                                   ; out              ;
+; |cash_line|Data_in[1][11]                                  ; |cash_line|Data_in[1][11]                                  ; out              ;
+; |cash_line|Data_in[1][8]                                   ; |cash_line|Data_in[1][8]                                   ; out              ;
+; |cash_line|Data_in[1][6]                                   ; |cash_line|Data_in[1][6]                                   ; out              ;
+; |cash_line|Data_in[1][4]                                   ; |cash_line|Data_in[1][4]                                   ; out              ;
+; |cash_line|Data_in[1][2]                                   ; |cash_line|Data_in[1][2]                                   ; out              ;
+; |cash_line|Data_in[1][1]                                   ; |cash_line|Data_in[1][1]                                   ; out              ;
+; |cash_line|Data_in[2][12]                                  ; |cash_line|Data_in[2][12]                                  ; out              ;
+; |cash_line|Data_in[2][11]                                  ; |cash_line|Data_in[2][11]                                  ; out              ;
+; |cash_line|Data_in[2][10]                                  ; |cash_line|Data_in[2][10]                                  ; out              ;
+; |cash_line|Data_in[2][8]                                   ; |cash_line|Data_in[2][8]                                   ; out              ;
+; |cash_line|Data_in[2][7]                                   ; |cash_line|Data_in[2][7]                                   ; out              ;
+; |cash_line|Data_in[2][6]                                   ; |cash_line|Data_in[2][6]                                   ; out              ;
+; |cash_line|Data_in[2][5]                                   ; |cash_line|Data_in[2][5]                                   ; out              ;
+; |cash_line|Data_in[2][4]                                   ; |cash_line|Data_in[2][4]                                   ; out              ;
+; |cash_line|Data_in[2][3]                                   ; |cash_line|Data_in[2][3]                                   ; out              ;
+; |cash_line|Data_in[2][2]                                   ; |cash_line|Data_in[2][2]                                   ; out              ;
+; |cash_line|Data_in[2][1]                                   ; |cash_line|Data_in[2][1]                                   ; out              ;
+; |cash_line|Data_in[2][0]                                   ; |cash_line|Data_in[2][0]                                   ; out              ;
+; |cash_line|Data_in[3][12]                                  ; |cash_line|Data_in[3][12]                                  ; out              ;
+; |cash_line|Data_in[3][11]                                  ; |cash_line|Data_in[3][11]                                  ; out              ;
+; |cash_line|Data_in[3][10]                                  ; |cash_line|Data_in[3][10]                                  ; out              ;
+; |cash_line|Data_in[3][9]                                   ; |cash_line|Data_in[3][9]                                   ; out              ;
+; |cash_line|Data_in[3][6]                                   ; |cash_line|Data_in[3][6]                                   ; out              ;
+; |cash_line|Data_in[3][5]                                   ; |cash_line|Data_in[3][5]                                   ; out              ;
+; |cash_line|Data_in[3][4]                                   ; |cash_line|Data_in[3][4]                                   ; out              ;
+; |cash_line|Data_in[3][2]                                   ; |cash_line|Data_in[3][2]                                   ; out              ;
+; |cash_line|Data_in[3][1]                                   ; |cash_line|Data_in[3][1]                                   ; out              ;
+; |cash_line|Tag_out[4]                                      ; |cash_line|Tag_out[4]                                      ; pin_out          ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[10] ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[10] ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[5]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[5]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[1]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[1]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[8]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[8]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[5]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[5]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[3]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[3]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[1]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[1]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[6]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[6]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[9]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[9]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[7]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[7]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[6]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[6]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[3]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[3]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[2]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[2]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[1]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[1]  ; regout           ;
+; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[8]   ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[8]   ; regout           ;
+; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[4]   ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[4]   ; regout           ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                                                                                                                                     ;
-+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                                      ; Output Port Name                                                                         ; Output Port Type ;
-+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+
-; |RAM|DataOut[12]                                                                               ; |RAM|DataOut[12]                                                                         ; pin_out          ;
-; |RAM|DataOut[11]                                                                               ; |RAM|DataOut[11]                                                                         ; pin_out          ;
-; |RAM|DataOut[10]                                                                               ; |RAM|DataOut[10]                                                                         ; pin_out          ;
-; |RAM|DataOut[9]                                                                                ; |RAM|DataOut[9]                                                                          ; pin_out          ;
-; |RAM|DataOut[8]                                                                                ; |RAM|DataOut[8]                                                                          ; pin_out          ;
-; |RAM|DataOut[7]                                                                                ; |RAM|DataOut[7]                                                                          ; pin_out          ;
-; |RAM|DataOut[6]                                                                                ; |RAM|DataOut[6]                                                                          ; pin_out          ;
-; |RAM|DataOut[5]                                                                                ; |RAM|DataOut[5]                                                                          ; pin_out          ;
-; |RAM|DataOut[4]                                                                                ; |RAM|DataOut[4]                                                                          ; pin_out          ;
-; |RAM|DataOut[3]                                                                                ; |RAM|DataOut[3]                                                                          ; pin_out          ;
-; |RAM|CS                                                                                        ; |RAM|CS                                                                                  ; out              ;
-; |RAM|Addr[7]                                                                                   ; |RAM|Addr[7]                                                                             ; out              ;
-; |RAM|Addr[6]                                                                                   ; |RAM|Addr[6]                                                                             ; out              ;
-; |RAM|Addr[5]                                                                                   ; |RAM|Addr[5]                                                                             ; out              ;
-; |RAM|Addr[4]                                                                                   ; |RAM|Addr[4]                                                                             ; out              ;
-; |RAM|Addr[3]                                                                                   ; |RAM|Addr[3]                                                                             ; out              ;
-; |RAM|lpm_rom:inst|otri[12]                                                                     ; |RAM|lpm_rom:inst|otri[12]                                                               ; out              ;
-; |RAM|lpm_rom:inst|otri[11]                                                                     ; |RAM|lpm_rom:inst|otri[11]                                                               ; out              ;
-; |RAM|lpm_rom:inst|otri[10]                                                                     ; |RAM|lpm_rom:inst|otri[10]                                                               ; out              ;
-; |RAM|lpm_rom:inst|otri[9]                                                                      ; |RAM|lpm_rom:inst|otri[9]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[8]                                                                      ; |RAM|lpm_rom:inst|otri[8]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[7]                                                                      ; |RAM|lpm_rom:inst|otri[7]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[6]                                                                      ; |RAM|lpm_rom:inst|otri[6]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[5]                                                                      ; |RAM|lpm_rom:inst|otri[5]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[4]                                                                      ; |RAM|lpm_rom:inst|otri[4]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[3]                                                                      ; |RAM|lpm_rom:inst|otri[3]                                                                ; out              ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a3  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[3]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a4  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[4]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a5  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[5]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a6  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[6]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a7  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[7]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a8  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[8]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a9  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[9]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a10 ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[10] ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a11 ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[11] ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a12 ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[12] ; portadataout0    ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[12]                                ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[12]                          ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[11]                                ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[11]                          ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[10]                                ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[10]                          ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[9]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[9]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[8]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[8]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[7]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[7]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[6]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[6]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[5]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[5]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[4]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[4]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[3]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[3]                           ; out              ;
-+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                   ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
+; Node Name                                                  ; Output Port Name                                           ; Output Port Type ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
+; |cash_line|Data_out[0][11]                                 ; |cash_line|Data_out[0][11]                                 ; pin_out          ;
+; |cash_line|Data_out[0][10]                                 ; |cash_line|Data_out[0][10]                                 ; pin_out          ;
+; |cash_line|Data_out[0][5]                                  ; |cash_line|Data_out[0][5]                                  ; pin_out          ;
+; |cash_line|Data_out[1][12]                                 ; |cash_line|Data_out[1][12]                                 ; pin_out          ;
+; |cash_line|Data_out[1][10]                                 ; |cash_line|Data_out[1][10]                                 ; pin_out          ;
+; |cash_line|Data_out[1][9]                                  ; |cash_line|Data_out[1][9]                                  ; pin_out          ;
+; |cash_line|Data_out[1][7]                                  ; |cash_line|Data_out[1][7]                                  ; pin_out          ;
+; |cash_line|Data_out[1][5]                                  ; |cash_line|Data_out[1][5]                                  ; pin_out          ;
+; |cash_line|Data_out[1][3]                                  ; |cash_line|Data_out[1][3]                                  ; pin_out          ;
+; |cash_line|Data_out[1][0]                                  ; |cash_line|Data_out[1][0]                                  ; pin_out          ;
+; |cash_line|Data_out[2][9]                                  ; |cash_line|Data_out[2][9]                                  ; pin_out          ;
+; |cash_line|Data_out[3][8]                                  ; |cash_line|Data_out[3][8]                                  ; pin_out          ;
+; |cash_line|Data_out[3][7]                                  ; |cash_line|Data_out[3][7]                                  ; pin_out          ;
+; |cash_line|Data_out[3][3]                                  ; |cash_line|Data_out[3][3]                                  ; pin_out          ;
+; |cash_line|Data_out[3][0]                                  ; |cash_line|Data_out[3][0]                                  ; pin_out          ;
+; |cash_line|Data_in[0][11]                                  ; |cash_line|Data_in[0][11]                                  ; out              ;
+; |cash_line|Data_in[0][10]                                  ; |cash_line|Data_in[0][10]                                  ; out              ;
+; |cash_line|Data_in[0][5]                                   ; |cash_line|Data_in[0][5]                                   ; out              ;
+; |cash_line|Data_in[1][12]                                  ; |cash_line|Data_in[1][12]                                  ; out              ;
+; |cash_line|Data_in[1][10]                                  ; |cash_line|Data_in[1][10]                                  ; out              ;
+; |cash_line|Data_in[1][9]                                   ; |cash_line|Data_in[1][9]                                   ; out              ;
+; |cash_line|Data_in[1][7]                                   ; |cash_line|Data_in[1][7]                                   ; out              ;
+; |cash_line|Data_in[1][5]                                   ; |cash_line|Data_in[1][5]                                   ; out              ;
+; |cash_line|Data_in[1][3]                                   ; |cash_line|Data_in[1][3]                                   ; out              ;
+; |cash_line|Data_in[1][0]                                   ; |cash_line|Data_in[1][0]                                   ; out              ;
+; |cash_line|Data_in[2][9]                                   ; |cash_line|Data_in[2][9]                                   ; out              ;
+; |cash_line|Data_in[3][8]                                   ; |cash_line|Data_in[3][8]                                   ; out              ;
+; |cash_line|Data_in[3][7]                                   ; |cash_line|Data_in[3][7]                                   ; out              ;
+; |cash_line|Data_in[3][3]                                   ; |cash_line|Data_in[3][3]                                   ; out              ;
+; |cash_line|Data_in[3][0]                                   ; |cash_line|Data_in[3][0]                                   ; out              ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[8]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[8]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[7]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[7]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[3]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[3]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[0]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[0]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[9]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[9]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[12] ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[12] ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[10] ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[10] ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[9]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[9]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[7]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[7]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[5]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[5]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[3]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[3]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[0]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[0]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[11] ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[11] ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[10] ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[10] ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[5]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[5]  ; regout           ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                                                                                                                     ;
-+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                                      ; Output Port Name                                                                         ; Output Port Type ;
-+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+
-; |RAM|DataOut[12]                                                                               ; |RAM|DataOut[12]                                                                         ; pin_out          ;
-; |RAM|DataOut[11]                                                                               ; |RAM|DataOut[11]                                                                         ; pin_out          ;
-; |RAM|DataOut[10]                                                                               ; |RAM|DataOut[10]                                                                         ; pin_out          ;
-; |RAM|DataOut[9]                                                                                ; |RAM|DataOut[9]                                                                          ; pin_out          ;
-; |RAM|DataOut[8]                                                                                ; |RAM|DataOut[8]                                                                          ; pin_out          ;
-; |RAM|DataOut[7]                                                                                ; |RAM|DataOut[7]                                                                          ; pin_out          ;
-; |RAM|DataOut[6]                                                                                ; |RAM|DataOut[6]                                                                          ; pin_out          ;
-; |RAM|DataOut[5]                                                                                ; |RAM|DataOut[5]                                                                          ; pin_out          ;
-; |RAM|DataOut[4]                                                                                ; |RAM|DataOut[4]                                                                          ; pin_out          ;
-; |RAM|DataOut[3]                                                                                ; |RAM|DataOut[3]                                                                          ; pin_out          ;
-; |RAM|Addr[7]                                                                                   ; |RAM|Addr[7]                                                                             ; out              ;
-; |RAM|Addr[6]                                                                                   ; |RAM|Addr[6]                                                                             ; out              ;
-; |RAM|Addr[5]                                                                                   ; |RAM|Addr[5]                                                                             ; out              ;
-; |RAM|Addr[4]                                                                                   ; |RAM|Addr[4]                                                                             ; out              ;
-; |RAM|Addr[3]                                                                                   ; |RAM|Addr[3]                                                                             ; out              ;
-; |RAM|lpm_rom:inst|otri[12]                                                                     ; |RAM|lpm_rom:inst|otri[12]                                                               ; out              ;
-; |RAM|lpm_rom:inst|otri[11]                                                                     ; |RAM|lpm_rom:inst|otri[11]                                                               ; out              ;
-; |RAM|lpm_rom:inst|otri[10]                                                                     ; |RAM|lpm_rom:inst|otri[10]                                                               ; out              ;
-; |RAM|lpm_rom:inst|otri[9]                                                                      ; |RAM|lpm_rom:inst|otri[9]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[8]                                                                      ; |RAM|lpm_rom:inst|otri[8]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[7]                                                                      ; |RAM|lpm_rom:inst|otri[7]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[6]                                                                      ; |RAM|lpm_rom:inst|otri[6]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[5]                                                                      ; |RAM|lpm_rom:inst|otri[5]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[4]                                                                      ; |RAM|lpm_rom:inst|otri[4]                                                                ; out              ;
-; |RAM|lpm_rom:inst|otri[3]                                                                      ; |RAM|lpm_rom:inst|otri[3]                                                                ; out              ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a3  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[3]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a4  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[4]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a5  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[5]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a6  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[6]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a7  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[7]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a8  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[8]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a9  ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[9]  ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a10 ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[10] ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a11 ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[11] ; portadataout0    ;
-; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|ram_block1a12 ; |RAM|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_3pv:auto_generated|q_a[12] ; portadataout0    ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[12]                                ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[12]                          ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[11]                                ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[11]                          ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[10]                                ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[10]                          ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[9]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[9]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[8]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[8]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[7]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[7]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[6]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[6]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[5]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[5]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[4]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[4]                           ; out              ;
-; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[3]                                 ; |RAM|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component|dout[3]                           ; out              ;
-+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                   ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
+; Node Name                                                  ; Output Port Name                                           ; Output Port Type ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
+; |cash_line|D_out                                           ; |cash_line|D_out                                           ; pin_out          ;
+; |cash_line|Data_out[0][12]                                 ; |cash_line|Data_out[0][12]                                 ; pin_out          ;
+; |cash_line|Data_out[0][11]                                 ; |cash_line|Data_out[0][11]                                 ; pin_out          ;
+; |cash_line|Data_out[0][10]                                 ; |cash_line|Data_out[0][10]                                 ; pin_out          ;
+; |cash_line|Data_out[0][8]                                  ; |cash_line|Data_out[0][8]                                  ; pin_out          ;
+; |cash_line|Data_out[0][5]                                  ; |cash_line|Data_out[0][5]                                  ; pin_out          ;
+; |cash_line|Data_out[0][4]                                  ; |cash_line|Data_out[0][4]                                  ; pin_out          ;
+; |cash_line|Data_out[0][0]                                  ; |cash_line|Data_out[0][0]                                  ; pin_out          ;
+; |cash_line|Data_out[1][12]                                 ; |cash_line|Data_out[1][12]                                 ; pin_out          ;
+; |cash_line|Data_out[1][11]                                 ; |cash_line|Data_out[1][11]                                 ; pin_out          ;
+; |cash_line|Data_out[1][10]                                 ; |cash_line|Data_out[1][10]                                 ; pin_out          ;
+; |cash_line|Data_out[1][9]                                  ; |cash_line|Data_out[1][9]                                  ; pin_out          ;
+; |cash_line|Data_out[1][8]                                  ; |cash_line|Data_out[1][8]                                  ; pin_out          ;
+; |cash_line|Data_out[1][7]                                  ; |cash_line|Data_out[1][7]                                  ; pin_out          ;
+; |cash_line|Data_out[1][5]                                  ; |cash_line|Data_out[1][5]                                  ; pin_out          ;
+; |cash_line|Data_out[1][4]                                  ; |cash_line|Data_out[1][4]                                  ; pin_out          ;
+; |cash_line|Data_out[1][3]                                  ; |cash_line|Data_out[1][3]                                  ; pin_out          ;
+; |cash_line|Data_out[1][2]                                  ; |cash_line|Data_out[1][2]                                  ; pin_out          ;
+; |cash_line|Data_out[1][1]                                  ; |cash_line|Data_out[1][1]                                  ; pin_out          ;
+; |cash_line|Data_out[1][0]                                  ; |cash_line|Data_out[1][0]                                  ; pin_out          ;
+; |cash_line|Data_out[2][12]                                 ; |cash_line|Data_out[2][12]                                 ; pin_out          ;
+; |cash_line|Data_out[2][11]                                 ; |cash_line|Data_out[2][11]                                 ; pin_out          ;
+; |cash_line|Data_out[2][10]                                 ; |cash_line|Data_out[2][10]                                 ; pin_out          ;
+; |cash_line|Data_out[2][9]                                  ; |cash_line|Data_out[2][9]                                  ; pin_out          ;
+; |cash_line|Data_out[2][7]                                  ; |cash_line|Data_out[2][7]                                  ; pin_out          ;
+; |cash_line|Data_out[2][6]                                  ; |cash_line|Data_out[2][6]                                  ; pin_out          ;
+; |cash_line|Data_out[2][4]                                  ; |cash_line|Data_out[2][4]                                  ; pin_out          ;
+; |cash_line|Data_out[2][2]                                  ; |cash_line|Data_out[2][2]                                  ; pin_out          ;
+; |cash_line|Data_out[2][0]                                  ; |cash_line|Data_out[2][0]                                  ; pin_out          ;
+; |cash_line|Data_out[3][12]                                 ; |cash_line|Data_out[3][12]                                 ; pin_out          ;
+; |cash_line|Data_out[3][11]                                 ; |cash_line|Data_out[3][11]                                 ; pin_out          ;
+; |cash_line|Data_out[3][9]                                  ; |cash_line|Data_out[3][9]                                  ; pin_out          ;
+; |cash_line|Data_out[3][8]                                  ; |cash_line|Data_out[3][8]                                  ; pin_out          ;
+; |cash_line|Data_out[3][7]                                  ; |cash_line|Data_out[3][7]                                  ; pin_out          ;
+; |cash_line|Data_out[3][6]                                  ; |cash_line|Data_out[3][6]                                  ; pin_out          ;
+; |cash_line|Data_out[3][4]                                  ; |cash_line|Data_out[3][4]                                  ; pin_out          ;
+; |cash_line|Data_out[3][3]                                  ; |cash_line|Data_out[3][3]                                  ; pin_out          ;
+; |cash_line|Data_out[3][2]                                  ; |cash_line|Data_out[3][2]                                  ; pin_out          ;
+; |cash_line|Data_out[3][0]                                  ; |cash_line|Data_out[3][0]                                  ; pin_out          ;
+; |cash_line|Data_in[0][11]                                  ; |cash_line|Data_in[0][11]                                  ; out              ;
+; |cash_line|Data_in[0][10]                                  ; |cash_line|Data_in[0][10]                                  ; out              ;
+; |cash_line|Data_in[0][5]                                   ; |cash_line|Data_in[0][5]                                   ; out              ;
+; |cash_line|Data_in[1][12]                                  ; |cash_line|Data_in[1][12]                                  ; out              ;
+; |cash_line|Data_in[1][10]                                  ; |cash_line|Data_in[1][10]                                  ; out              ;
+; |cash_line|Data_in[1][9]                                   ; |cash_line|Data_in[1][9]                                   ; out              ;
+; |cash_line|Data_in[1][7]                                   ; |cash_line|Data_in[1][7]                                   ; out              ;
+; |cash_line|Data_in[1][5]                                   ; |cash_line|Data_in[1][5]                                   ; out              ;
+; |cash_line|Data_in[1][3]                                   ; |cash_line|Data_in[1][3]                                   ; out              ;
+; |cash_line|Data_in[1][0]                                   ; |cash_line|Data_in[1][0]                                   ; out              ;
+; |cash_line|Data_in[2][9]                                   ; |cash_line|Data_in[2][9]                                   ; out              ;
+; |cash_line|Data_in[3][8]                                   ; |cash_line|Data_in[3][8]                                   ; out              ;
+; |cash_line|Data_in[3][7]                                   ; |cash_line|Data_in[3][7]                                   ; out              ;
+; |cash_line|Data_in[3][3]                                   ; |cash_line|Data_in[3][3]                                   ; out              ;
+; |cash_line|Data_in[3][0]                                   ; |cash_line|Data_in[3][0]                                   ; out              ;
+; |cash_line|LRU_out[1]                                      ; |cash_line|LRU_out[1]                                      ; pin_out          ;
+; |cash_line|LRU_out[0]                                      ; |cash_line|LRU_out[0]                                      ; pin_out          ;
+; |cash_line|Tag_out[3]                                      ; |cash_line|Tag_out[3]                                      ; pin_out          ;
+; |cash_line|Tag_out[2]                                      ; |cash_line|Tag_out[2]                                      ; pin_out          ;
+; |cash_line|Tag_out[1]                                      ; |cash_line|Tag_out[1]                                      ; pin_out          ;
+; |cash_line|Tag_out[0]                                      ; |cash_line|Tag_out[0]                                      ; pin_out          ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[12] ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[12] ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[11] ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[11] ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[9]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[9]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[8]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[8]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[7]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[7]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[6]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[6]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[4]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[4]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[3]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[3]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[2]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[2]  ; regout           ;
+; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[0]  ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[0]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[12] ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[12] ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[11] ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[11] ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[10] ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[10] ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[9]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[9]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[7]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[7]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[6]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[6]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[4]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[4]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[2]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[2]  ; regout           ;
+; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[0]  ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[0]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[12] ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[12] ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[11] ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[11] ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[10] ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[10] ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[9]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[9]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[8]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[8]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[7]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[7]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[5]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[5]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[4]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[4]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[3]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[3]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[2]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[2]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[1]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[1]  ; regout           ;
+; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[0]  ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[0]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[12] ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[12] ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[11] ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[11] ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[10] ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[10] ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[8]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[8]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[5]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[5]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[4]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[4]  ; regout           ;
+; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[0]  ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[0]  ; regout           ;
+; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[7]   ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[7]   ; regout           ;
+; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[6]   ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[6]   ; regout           ;
+; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[5]   ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[5]   ; regout           ;
+; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[3]   ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[3]   ; regout           ;
+; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[2]   ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[2]   ; regout           ;
+; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[1]   ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[1]   ; regout           ;
+; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[0]   ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[0]   ; regout           ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -257,17 +373,63 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Tue May 05 19:08:23 2026
+    Info: Processing started: Wed May 06 10:22:13 2026
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off kurswork -c kurswork
 Info: Using vector source file "Z:/BSUIR/3_course/Сифо/Курсач/kurswork/kurswork.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[10]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[9]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[5]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[4]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[1]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[10]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[8]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[7]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[5]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[3]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[1]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[8]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[6]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[2]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[9]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[8]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[7]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[6]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[4]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[3]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[2]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[1]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[0]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[8]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[6]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[4]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[2]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[0]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[12]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[11]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[6]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component|dffs[2]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[12]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[11]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[6]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[4]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[2]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[0]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[11]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[4]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[1]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component|dffs[12]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[7]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[5]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[3]"
+Warning: Found clock-sensitive change during active clock edge at time 130.0 ns on register "|cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component|dffs[1]"
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      25.81 %
-Info: Number of transitions in simulation is 190
-Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 103 megabytes
-    Info: Processing ended: Tue May 05 19:08:24 2026
+Info: Simulation coverage is      43.24 %
+Info: Number of transitions in simulation is 343
+Info: Quartus II Simulator was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 100 megabytes
+    Info: Processing ended: Wed May 06 10:22:14 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

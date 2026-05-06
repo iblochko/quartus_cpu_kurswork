@@ -1,15 +1,15 @@
-Analysis & Synthesis Status : Successful - Tue May 05 19:42:33 2026
+Analysis & Synthesis Status : Successful - Wed May 06 10:15:29 2026
 Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
 Revision Name : kurswork
-Top-level Entity Name : RAM
+Top-level Entity Name : cash_line
 Family : Stratix II
 Logic utilization : N/A
     Combinational ALUTs : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 38
+    Dedicated logic registers : 61
+Total registers : 61
+Total pins : 124
 Total virtual pins : 0
-Total block memory bits : 3,328
+Total block memory bits : 0
 DSP block 9-bit elements : 0
 Total PLLs : 0
 Total DLLs : 0
