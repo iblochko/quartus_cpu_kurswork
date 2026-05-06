@@ -1,5 +1,5 @@
 Analysis & Synthesis report for kurswork
-Wed May 06 14:18:25 2026
+Wed May 06 22:17:14 2026
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -14,12 +14,15 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: lpm_dff2:inst|lpm_ff:lpm_ff_component
- 10. Parameter Settings for User Entity Instance: lpm_dff3:inst1|lpm_ff:lpm_ff_component
- 11. Parameter Settings for User Entity Instance: lpm_dff3:inst2|lpm_ff:lpm_ff_component
- 12. Parameter Settings for User Entity Instance: lpm_dff3:inst3|lpm_ff:lpm_ff_component
- 13. Parameter Settings for User Entity Instance: lpm_dff3:inst4|lpm_ff:lpm_ff_component
- 14. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: lpm_dff2:inst|lpm_ff:lpm_ff_component
+ 11. Parameter Settings for User Entity Instance: lpm_mux7:inst10|LPM_MUX:lpm_mux_component
+ 12. Parameter Settings for User Entity Instance: lpm_dff3:inst1|lpm_ff:lpm_ff_component
+ 13. Parameter Settings for User Entity Instance: lpm_decode4:inst5|lpm_decode:lpm_decode_component
+ 14. Parameter Settings for User Entity Instance: lpm_dff3:inst2|lpm_ff:lpm_ff_component
+ 15. Parameter Settings for User Entity Instance: lpm_dff3:inst3|lpm_ff:lpm_ff_component
+ 16. Parameter Settings for User Entity Instance: lpm_dff3:inst4|lpm_ff:lpm_ff_component
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +48,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                            ;
 +-------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Wed May 06 14:18:25 2026   ;
+; Analysis & Synthesis Status   ; Successful - Wed May 06 22:17:14 2026   ;
 ; Quartus II Version            ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name                 ; kurswork                                ;
 ; Top-level Entity Name         ; cash_line                               ;
 ; Family                        ; Stratix II                              ;
 ; Logic utilization             ; N/A                                     ;
-;     Combinational ALUTs       ; 0                                       ;
-;     Dedicated logic registers ; 63                                      ;
-; Total registers               ; 63                                      ;
-; Total pins                    ; 128                                     ;
+;     Combinational ALUTs       ; 17                                      ;
+;     Dedicated logic registers ; 59                                      ;
+; Total registers               ; 59                                      ;
+; Total pins                    ; 44                                      ;
 ; Total virtual pins            ; 0                                       ;
 ; Total block memory bits       ; 0                                       ;
 ; DSP block 9-bit elements      ; 0                                       ;
@@ -154,16 +157,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                            ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------+
-; lpm_dff2.vhd                     ; yes             ; User Wizard-Generated File         ; Z:/BSUIR/3_course/Сифо/Курсач/kurswork/lpm_dff2.vhd     ;
-; cash_line.bdf                    ; yes             ; User Block Diagram/Schematic File  ; Z:/BSUIR/3_course/Сифо/Курсач/kurswork/cash_line.bdf    ;
-; lpm_dff3.vhd                     ; yes             ; User Wizard-Generated File         ; Z:/BSUIR/3_course/Сифо/Курсач/kurswork/lpm_dff3.vhd     ;
-; lpm_ff.tdf                       ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/megafunctions/lpm_ff.tdf ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
+; lpm_dff2.vhd                     ; yes             ; User Wizard-Generated File         ; Z:/BSUIR/3_course/Сифо/Курсач/kurswork/lpm_dff2.vhd         ;
+; cash_line.bdf                    ; yes             ; User Block Diagram/Schematic File  ; Z:/BSUIR/3_course/Сифо/Курсач/kurswork/cash_line.bdf        ;
+; lpm_dff3.vhd                     ; yes             ; User Wizard-Generated File         ; Z:/BSUIR/3_course/Сифо/Курсач/kurswork/lpm_dff3.vhd         ;
+; lpm_decode4.vhd                  ; yes             ; User Wizard-Generated File         ; Z:/BSUIR/3_course/Сифо/Курсач/kurswork/lpm_decode4.vhd      ;
+; lpm_mux7.vhd                     ; yes             ; User Wizard-Generated File         ; Z:/BSUIR/3_course/Сифо/Курсач/kurswork/lpm_mux7.vhd         ;
+; lpm_ff.tdf                       ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/megafunctions/lpm_ff.tdf     ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/megafunctions/lpm_mux.tdf    ;
+; db/mux_o5e.tdf                   ; yes             ; Auto-Generated Megafunction        ; Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/mux_o5e.tdf       ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/megafunctions/lpm_decode.tdf ;
+; db/decode_p7f.tdf                ; yes             ; Auto-Generated Megafunction        ; Z:/BSUIR/3_course/Сифо/Курсач/kurswork/db/decode_p7f.tdf    ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -171,58 +180,64 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-------+
 ; Resource                                      ; Usage ;
 +-----------------------------------------------+-------+
-; Estimated ALUTs Used                          ; 0     ;
-; Dedicated logic registers                     ; 63    ;
+; Estimated ALUTs Used                          ; 17    ;
+; Dedicated logic registers                     ; 59    ;
 ;                                               ;       ;
 ; Estimated ALUTs Unavailable                   ; 0     ;
 ;                                               ;       ;
-; Total combinational functions                 ; 0     ;
+; Total combinational functions                 ; 17    ;
 ; Combinational ALUT usage by number of inputs  ;       ;
 ;     -- 7 input functions                      ; 0     ;
-;     -- 6 input functions                      ; 0     ;
+;     -- 6 input functions                      ; 13    ;
 ;     -- 5 input functions                      ; 0     ;
 ;     -- 4 input functions                      ; 0     ;
-;     -- <=3 input functions                    ; 0     ;
+;     -- <=3 input functions                    ; 4     ;
 ;                                               ;       ;
 ; Combinational ALUTs by mode                   ;       ;
-;     -- normal mode                            ; 0     ;
+;     -- normal mode                            ; 17    ;
 ;     -- extended LUT mode                      ; 0     ;
 ;     -- arithmetic mode                        ; 0     ;
 ;     -- shared arithmetic mode                 ; 0     ;
 ;                                               ;       ;
-; Estimated ALUT/register pairs used            ; 63    ;
+; Estimated ALUT/register pairs used            ; 74    ;
 ;                                               ;       ;
-; Total registers                               ; 63    ;
-;     -- Dedicated logic registers              ; 63    ;
+; Total registers                               ; 59    ;
+;     -- Dedicated logic registers              ; 59    ;
 ;     -- I/O registers                          ; 0     ;
 ;                                               ;       ;
-; Estimated ALMs:  partially or completely used ; 32    ;
+; Estimated ALMs:  partially or completely used ; 37    ;
 ;                                               ;       ;
-; I/O pins                                      ; 128   ;
+; I/O pins                                      ; 44    ;
 ; Maximum fan-out node                          ; clk   ;
-; Maximum fan-out                               ; 63    ;
-; Total fan-out                                 ; 252   ;
-; Average fan-out                               ; 1.32  ;
+; Maximum fan-out                               ; 59    ;
+; Total fan-out                                 ; 287   ;
+; Average fan-out                               ; 2.39  ;
 +-----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                              ;
-+---------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------+--------------+
-; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
-+---------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------+--------------+
-; |cash_line                      ; 0 (0)             ; 63 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 128  ; 0            ; |cash_line                                        ; work         ;
-;    |lpm_dff2:inst|              ; 0 (0)             ; 11 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff2:inst                          ;              ;
-;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 11 (11)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component  ; work         ;
-;    |lpm_dff3:inst1|             ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst1                         ;              ;
-;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component ; work         ;
-;    |lpm_dff3:inst2|             ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst2                         ;              ;
-;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component ; work         ;
-;    |lpm_dff3:inst3|             ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst3                         ; work         ;
-;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component ; work         ;
-;    |lpm_dff3:inst4|             ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst4                         ; work         ;
-;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component ; work         ;
-+---------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
++-----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                    ; Library Name ;
++-----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
+; |cash_line                              ; 17 (1)            ; 59 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 44   ; 0            ; |cash_line                                                                             ; work         ;
+;    |lpm_decode4:inst5|                  ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_decode4:inst5                                                           ; work         ;
+;       |lpm_decode:lpm_decode_component| ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_decode4:inst5|lpm_decode:lpm_decode_component                           ;              ;
+;          |decode_p7f:auto_generated|    ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_decode4:inst5|lpm_decode:lpm_decode_component|decode_p7f:auto_generated ; work         ;
+;    |lpm_dff2:inst|                      ; 0 (0)             ; 7 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff2:inst                                                               ;              ;
+;       |lpm_ff:lpm_ff_component|         ; 0 (0)             ; 7 (7)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component                                       ; work         ;
+;    |lpm_dff3:inst1|                     ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst1                                                              ; work         ;
+;       |lpm_ff:lpm_ff_component|         ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component                                      ;              ;
+;    |lpm_dff3:inst2|                     ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst2                                                              ; work         ;
+;       |lpm_ff:lpm_ff_component|         ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component                                      ; work         ;
+;    |lpm_dff3:inst3|                     ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst3                                                              ; work         ;
+;       |lpm_ff:lpm_ff_component|         ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component                                      ; work         ;
+;    |lpm_dff3:inst4|                     ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst4                                                              ; work         ;
+;       |lpm_ff:lpm_ff_component|         ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component                                      ; work         ;
+;    |lpm_mux7:inst10|                    ; 13 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_mux7:inst10                                                             ; work         ;
+;       |lpm_mux:lpm_mux_component|       ; 13 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_mux7:inst10|lpm_mux:lpm_mux_component                                   ; work         ;
+;          |mux_o5e:auto_generated|       ; 13 (13)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_mux7:inst10|lpm_mux:lpm_mux_component|mux_o5e:auto_generated            ;              ;
++-----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -231,14 +246,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 63    ;
+; Total registers                              ; 59    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 63    ;
+; Number of registers using Clock Enable       ; 59    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
+; 4:1                ; 13 bits   ; 26 ALUTs      ; 26 ALUTs             ; 0 ALUTs                ; No         ; |cash_line|lpm_mux7:inst10|lpm_mux:lpm_mux_component|mux_o5e:auto_generated|l2_w12_n0_mux_dataout ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------+
@@ -246,7 +270,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------+------------+----------------------------------------------+
 ; Parameter Name         ; Value      ; Type                                         ;
 +------------------------+------------+----------------------------------------------+
-; LPM_WIDTH              ; 11         ; Signed Integer                               ;
+; LPM_WIDTH              ; 7          ; Signed Integer                               ;
 ; LPM_AVALUE             ; UNUSED     ; Untyped                                      ;
 ; LPM_SVALUE             ; UNUSED     ; Untyped                                      ;
 ; LPM_FFTYPE             ; DFF        ; Untyped                                      ;
@@ -257,6 +281,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                 ;
 ; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                               ;
 +------------------------+------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux7:inst10|LPM_MUX:lpm_mux_component ;
++------------------------+------------+--------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                             ;
++------------------------+------------+--------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                   ;
+; LPM_WIDTH              ; 13         ; Signed Integer                                   ;
+; LPM_SIZE               ; 4          ; Signed Integer                                   ;
+; LPM_WIDTHS             ; 2          ; Signed Integer                                   ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                   ;
+; CBXI_PARAMETER         ; mux_o5e    ; Untyped                                          ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                          ;
++------------------------+------------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -276,6 +319,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                  ;
 ; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                ;
 +------------------------+------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_decode4:inst5|lpm_decode:lpm_decode_component ;
++------------------------+------------+----------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                     ;
++------------------------+------------+----------------------------------------------------------+
+; LPM_WIDTH              ; 2          ; Signed Integer                                           ;
+; LPM_DECODES            ; 4          ; Signed Integer                                           ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                  ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                  ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                                  ;
+; CBXI_PARAMETER         ; decode_p7f ; Untyped                                                  ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                           ;
++------------------------+------------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -342,7 +404,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Wed May 06 14:18:18 2026
+    Info: Processing started: Wed May 06 22:17:04 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off kurswork -c kurswork
 Info: Found 1 design units, including 1 entities, in source file reg.bdf
     Info: Found entity 1: reg
@@ -442,6 +504,33 @@ Info: Found 1 design units, including 1 entities, in source file lru_set.bdf
 Info: Found 2 design units, including 1 entities, in source file lpm_counter1.vhd
     Info: Found design unit 1: lpm_counter1-SYN
     Info: Found entity 1: lpm_counter1
+Info: Found 2 design units, including 1 entities, in source file lpm_compare4.vhd
+    Info: Found design unit 1: lpm_compare4-SYN
+    Info: Found entity 1: lpm_compare4
+Info: Found 2 design units, including 1 entities, in source file lpm_mux4.vhd
+    Info: Found design unit 1: lpm_mux4-SYN
+    Info: Found entity 1: lpm_mux4
+Info: Found 2 design units, including 1 entities, in source file lpm_mux5.vhd
+    Info: Found design unit 1: lpm_mux5-SYN
+    Info: Found entity 1: lpm_mux5
+Info: Found 2 design units, including 1 entities, in source file lpm_decode2.vhd
+    Info: Found design unit 1: lpm_decode2-SYN
+    Info: Found entity 1: lpm_decode2
+Info: Found 2 design units, including 1 entities, in source file lpm_compare5.vhd
+    Info: Found design unit 1: lpm_compare5-SYN
+    Info: Found entity 1: lpm_compare5
+Info: Found 2 design units, including 1 entities, in source file lpm_mux6.vhd
+    Info: Found design unit 1: lpm_mux6-SYN
+    Info: Found entity 1: lpm_mux6
+Info: Found 2 design units, including 1 entities, in source file lpm_decode3.vhd
+    Info: Found design unit 1: lpm_decode3-SYN
+    Info: Found entity 1: lpm_decode3
+Info: Found 2 design units, including 1 entities, in source file lpm_decode4.vhd
+    Info: Found design unit 1: lpm_decode4-SYN
+    Info: Found entity 1: lpm_decode4
+Info: Found 2 design units, including 1 entities, in source file lpm_mux7.vhd
+    Info: Found design unit 1: lpm_mux7-SYN
+    Info: Found entity 1: lpm_mux7
 Info: Elaborating entity "cash_line" for the top level hierarchy
 Info: Elaborating entity "lpm_dff2" for hierarchy "lpm_dff2:inst"
 Info: Elaborating entity "lpm_ff" for hierarchy "lpm_dff2:inst|lpm_ff:lpm_ff_component"
@@ -449,7 +538,20 @@ Info: Elaborated megafunction instantiation "lpm_dff2:inst|lpm_ff:lpm_ff_compone
 Info: Instantiated megafunction "lpm_dff2:inst|lpm_ff:lpm_ff_component" with the following parameter:
     Info: Parameter "lpm_fftype" = "DFF"
     Info: Parameter "lpm_type" = "LPM_FF"
-    Info: Parameter "lpm_width" = "11"
+    Info: Parameter "lpm_width" = "7"
+Info: Elaborating entity "lpm_mux7" for hierarchy "lpm_mux7:inst10"
+Info: Elaborating entity "LPM_MUX" for hierarchy "lpm_mux7:inst10|LPM_MUX:lpm_mux_component"
+Info: Elaborated megafunction instantiation "lpm_mux7:inst10|LPM_MUX:lpm_mux_component"
+Info: Instantiated megafunction "lpm_mux7:inst10|LPM_MUX:lpm_mux_component" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "13"
+    Info: Parameter "LPM_SIZE" = "4"
+    Info: Parameter "LPM_WIDTHS" = "2"
+    Info: Parameter "LPM_PIPELINE" = "0"
+    Info: Parameter "LPM_TYPE" = "LPM_MUX"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/mux_o5e.tdf
+    Info: Found entity 1: mux_o5e
+Info: Elaborating entity "mux_o5e" for hierarchy "lpm_mux7:inst10|LPM_MUX:lpm_mux_component|mux_o5e:auto_generated"
 Info: Elaborating entity "lpm_dff3" for hierarchy "lpm_dff3:inst1"
 Info: Elaborating entity "lpm_ff" for hierarchy "lpm_dff3:inst1|lpm_ff:lpm_ff_component"
 Info: Elaborated megafunction instantiation "lpm_dff3:inst1|lpm_ff:lpm_ff_component"
@@ -457,20 +559,30 @@ Info: Instantiated megafunction "lpm_dff3:inst1|lpm_ff:lpm_ff_component" with th
     Info: Parameter "lpm_fftype" = "DFF"
     Info: Parameter "lpm_type" = "LPM_FF"
     Info: Parameter "lpm_width" = "13"
+Info: Elaborating entity "lpm_decode4" for hierarchy "lpm_decode4:inst5"
+Info: Elaborating entity "lpm_decode" for hierarchy "lpm_decode4:inst5|lpm_decode:lpm_decode_component"
+Info: Elaborated megafunction instantiation "lpm_decode4:inst5|lpm_decode:lpm_decode_component"
+Info: Instantiated megafunction "lpm_decode4:inst5|lpm_decode:lpm_decode_component" with the following parameter:
+    Info: Parameter "lpm_decodes" = "4"
+    Info: Parameter "lpm_type" = "LPM_DECODE"
+    Info: Parameter "lpm_width" = "2"
+Info: Found 1 design units, including 1 entities, in source file db/decode_p7f.tdf
+    Info: Found entity 1: decode_p7f
+Info: Elaborating entity "decode_p7f" for hierarchy "lpm_decode4:inst5|lpm_decode:lpm_decode_component|decode_p7f:auto_generated"
 Warning: Ignored assignments for entity "kurswork" -- entity does not exist in design
     Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity kurswork -section_id "Root Region" was ignored
     Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity kurswork -section_id "Root Region" was ignored
 Warning: Ignored assignments for entity "regFlag" -- entity does not exist in design
     Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity regFlag -section_id "Root Region" was ignored
     Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity regFlag -section_id "Root Region" was ignored
-Info: Implemented 191 device resources after synthesis - the final resource count might be different
-    Info: Implemented 65 input pins
-    Info: Implemented 63 output pins
-    Info: Implemented 63 logic cells
+Info: Implemented 120 device resources after synthesis - the final resource count might be different
+    Info: Implemented 24 input pins
+    Info: Implemented 20 output pins
+    Info: Implemented 76 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 170 megabytes
-    Info: Processing ended: Wed May 06 14:18:25 2026
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 174 megabytes
+    Info: Processing ended: Wed May 06 22:17:14 2026
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:05
 
 
