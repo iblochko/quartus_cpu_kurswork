@@ -1,5 +1,5 @@
 |cash_line
-V_out <= lpm_dff2:inst.q[8]
+V_out <= lpm_dff2:inst.q[10]
 clk => lpm_dff2:inst.clock
 clk => lpm_dff3:inst1.clock
 clk => lpm_dff3:inst2.clock
@@ -10,16 +10,18 @@ WriteEn => lpm_dff3:inst1.enable
 WriteEn => lpm_dff3:inst2.enable
 WriteEn => lpm_dff3:inst3.enable
 WriteEn => lpm_dff3:inst4.enable
-V_in => lpm_dff2:inst.data[8]
-D_in => lpm_dff2:inst.data[7]
+V_in => lpm_dff2:inst.data[10]
+D_in => lpm_dff2:inst.data[9]
 LRU_in[0] => lpm_dff2:inst.data[5]
 LRU_in[1] => lpm_dff2:inst.data[6]
+LRU_in[2] => lpm_dff2:inst.data[7]
+LRU_in[3] => lpm_dff2:inst.data[8]
 Tag_in[0] => lpm_dff2:inst.data[0]
 Tag_in[1] => lpm_dff2:inst.data[1]
 Tag_in[2] => lpm_dff2:inst.data[2]
 Tag_in[3] => lpm_dff2:inst.data[3]
 Tag_in[4] => lpm_dff2:inst.data[4]
-D_out <= lpm_dff2:inst.q[7]
+D_out <= lpm_dff2:inst.q[9]
 Data_out[3][0] <= lpm_dff3:inst4.q[0]
 Data_out[3][1] <= lpm_dff3:inst4.q[1]
 Data_out[3][2] <= lpm_dff3:inst4.q[2]
@@ -126,6 +128,8 @@ Data_in[0][11] => lpm_dff3:inst1.data[11]
 Data_in[0][12] => lpm_dff3:inst1.data[12]
 LRU_out[0] <= lpm_dff2:inst.q[5]
 LRU_out[1] <= lpm_dff2:inst.q[6]
+LRU_out[2] <= lpm_dff2:inst.q[7]
+LRU_out[3] <= lpm_dff2:inst.q[8]
 Tag_out[0] <= lpm_dff2:inst.q[0]
 Tag_out[1] <= lpm_dff2:inst.q[1]
 Tag_out[2] <= lpm_dff2:inst.q[2]
@@ -144,6 +148,8 @@ data[5] => lpm_ff:lpm_ff_component.data[5]
 data[6] => lpm_ff:lpm_ff_component.data[6]
 data[7] => lpm_ff:lpm_ff_component.data[7]
 data[8] => lpm_ff:lpm_ff_component.data[8]
+data[9] => lpm_ff:lpm_ff_component.data[9]
+data[10] => lpm_ff:lpm_ff_component.data[10]
 enable => lpm_ff:lpm_ff_component.enable
 q[0] <= lpm_ff:lpm_ff_component.q[0]
 q[1] <= lpm_ff:lpm_ff_component.q[1]
@@ -154,6 +160,8 @@ q[5] <= lpm_ff:lpm_ff_component.q[5]
 q[6] <= lpm_ff:lpm_ff_component.q[6]
 q[7] <= lpm_ff:lpm_ff_component.q[7]
 q[8] <= lpm_ff:lpm_ff_component.q[8]
+q[9] <= lpm_ff:lpm_ff_component.q[9]
+q[10] <= lpm_ff:lpm_ff_component.q[10]
 
 
 |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component
@@ -166,6 +174,10 @@ data[5] => dffs[5].DATAIN
 data[6] => dffs[6].DATAIN
 data[7] => dffs[7].DATAIN
 data[8] => dffs[8].DATAIN
+data[9] => dffs[9].DATAIN
+data[10] => dffs[10].DATAIN
+clock => dffs[10].CLK
+clock => dffs[9].CLK
 clock => dffs[8].CLK
 clock => dffs[7].CLK
 clock => dffs[6].CLK
@@ -175,6 +187,8 @@ clock => dffs[3].CLK
 clock => dffs[2].CLK
 clock => dffs[1].CLK
 clock => dffs[0].CLK
+enable => dffs[10].ENA
+enable => dffs[9].ENA
 enable => dffs[8].ENA
 enable => dffs[7].ENA
 enable => dffs[6].ENA
@@ -199,6 +213,8 @@ q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
 q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
 q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
 q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cash_line|lpm_dff3:inst1

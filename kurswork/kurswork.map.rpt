@@ -1,5 +1,5 @@
 Analysis & Synthesis report for kurswork
-Wed May 06 10:15:29 2026
+Wed May 06 14:18:25 2026
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -45,16 +45,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                            ;
 +-------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Wed May 06 10:15:29 2026   ;
+; Analysis & Synthesis Status   ; Successful - Wed May 06 14:18:25 2026   ;
 ; Quartus II Version            ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name                 ; kurswork                                ;
 ; Top-level Entity Name         ; cash_line                               ;
 ; Family                        ; Stratix II                              ;
 ; Logic utilization             ; N/A                                     ;
 ;     Combinational ALUTs       ; 0                                       ;
-;     Dedicated logic registers ; 61                                      ;
-; Total registers               ; 61                                      ;
-; Total pins                    ; 124                                     ;
+;     Dedicated logic registers ; 63                                      ;
+; Total registers               ; 63                                      ;
+; Total pins                    ; 128                                     ;
 ; Total virtual pins            ; 0                                       ;
 ; Total block memory bits       ; 0                                       ;
 ; DSP block 9-bit elements      ; 0                                       ;
@@ -172,7 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Resource                                      ; Usage ;
 +-----------------------------------------------+-------+
 ; Estimated ALUTs Used                          ; 0     ;
-; Dedicated logic registers                     ; 61    ;
+; Dedicated logic registers                     ; 63    ;
 ;                                               ;       ;
 ; Estimated ALUTs Unavailable                   ; 0     ;
 ;                                               ;       ;
@@ -190,18 +190,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- arithmetic mode                        ; 0     ;
 ;     -- shared arithmetic mode                 ; 0     ;
 ;                                               ;       ;
-; Estimated ALUT/register pairs used            ; 61    ;
+; Estimated ALUT/register pairs used            ; 63    ;
 ;                                               ;       ;
-; Total registers                               ; 61    ;
-;     -- Dedicated logic registers              ; 61    ;
+; Total registers                               ; 63    ;
+;     -- Dedicated logic registers              ; 63    ;
 ;     -- I/O registers                          ; 0     ;
 ;                                               ;       ;
-; Estimated ALMs:  partially or completely used ; 31    ;
+; Estimated ALMs:  partially or completely used ; 32    ;
 ;                                               ;       ;
-; I/O pins                                      ; 124   ;
+; I/O pins                                      ; 128   ;
 ; Maximum fan-out node                          ; clk   ;
-; Maximum fan-out                               ; 61    ;
-; Total fan-out                                 ; 244   ;
+; Maximum fan-out                               ; 63    ;
+; Total fan-out                                 ; 252   ;
 ; Average fan-out                               ; 1.32  ;
 +-----------------------------------------------+-------+
 
@@ -211,14 +211,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------+--------------+
-; |cash_line                      ; 0 (0)             ; 61 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 124  ; 0            ; |cash_line                                        ; work         ;
-;    |lpm_dff2:inst|              ; 0 (0)             ; 9 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff2:inst                          ;              ;
-;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 9 (9)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component  ; work         ;
-;    |lpm_dff3:inst1|             ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst1                         ; work         ;
+; |cash_line                      ; 0 (0)             ; 63 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 128  ; 0            ; |cash_line                                        ; work         ;
+;    |lpm_dff2:inst|              ; 0 (0)             ; 11 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff2:inst                          ;              ;
+;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 11 (11)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff2:inst|lpm_ff:lpm_ff_component  ; work         ;
+;    |lpm_dff3:inst1|             ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst1                         ;              ;
 ;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst1|lpm_ff:lpm_ff_component ; work         ;
 ;    |lpm_dff3:inst2|             ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst2                         ;              ;
 ;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst2|lpm_ff:lpm_ff_component ; work         ;
-;    |lpm_dff3:inst3|             ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst3                         ;              ;
+;    |lpm_dff3:inst3|             ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst3                         ; work         ;
 ;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst3|lpm_ff:lpm_ff_component ; work         ;
 ;    |lpm_dff3:inst4|             ; 0 (0)             ; 13 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst4                         ; work         ;
 ;       |lpm_ff:lpm_ff_component| ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cash_line|lpm_dff3:inst4|lpm_ff:lpm_ff_component ; work         ;
@@ -231,12 +231,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 61    ;
+; Total registers                              ; 63    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 61    ;
+; Number of registers using Clock Enable       ; 63    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -246,7 +246,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------+------------+----------------------------------------------+
 ; Parameter Name         ; Value      ; Type                                         ;
 +------------------------+------------+----------------------------------------------+
-; LPM_WIDTH              ; 9          ; Signed Integer                               ;
+; LPM_WIDTH              ; 11         ; Signed Integer                               ;
 ; LPM_AVALUE             ; UNUSED     ; Untyped                                      ;
 ; LPM_SVALUE             ; UNUSED     ; Untyped                                      ;
 ; LPM_FFTYPE             ; DFF        ; Untyped                                      ;
@@ -342,7 +342,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Wed May 06 10:15:22 2026
+    Info: Processing started: Wed May 06 14:18:18 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off kurswork -c kurswork
 Info: Found 1 design units, including 1 entities, in source file reg.bdf
     Info: Found entity 1: reg
@@ -437,6 +437,11 @@ Info: Found 1 design units, including 1 entities, in source file cash_line.bdf
 Info: Found 2 design units, including 1 entities, in source file lpm_dff3.vhd
     Info: Found design unit 1: lpm_dff3-SYN
     Info: Found entity 1: lpm_dff3
+Info: Found 1 design units, including 1 entities, in source file lru_set.bdf
+    Info: Found entity 1: LRU_set
+Info: Found 2 design units, including 1 entities, in source file lpm_counter1.vhd
+    Info: Found design unit 1: lpm_counter1-SYN
+    Info: Found entity 1: lpm_counter1
 Info: Elaborating entity "cash_line" for the top level hierarchy
 Info: Elaborating entity "lpm_dff2" for hierarchy "lpm_dff2:inst"
 Info: Elaborating entity "lpm_ff" for hierarchy "lpm_dff2:inst|lpm_ff:lpm_ff_component"
@@ -444,7 +449,7 @@ Info: Elaborated megafunction instantiation "lpm_dff2:inst|lpm_ff:lpm_ff_compone
 Info: Instantiated megafunction "lpm_dff2:inst|lpm_ff:lpm_ff_component" with the following parameter:
     Info: Parameter "lpm_fftype" = "DFF"
     Info: Parameter "lpm_type" = "LPM_FF"
-    Info: Parameter "lpm_width" = "9"
+    Info: Parameter "lpm_width" = "11"
 Info: Elaborating entity "lpm_dff3" for hierarchy "lpm_dff3:inst1"
 Info: Elaborating entity "lpm_ff" for hierarchy "lpm_dff3:inst1|lpm_ff:lpm_ff_component"
 Info: Elaborated megafunction instantiation "lpm_dff3:inst1|lpm_ff:lpm_ff_component"
@@ -458,14 +463,14 @@ Warning: Ignored assignments for entity "kurswork" -- entity does not exist in d
 Warning: Ignored assignments for entity "regFlag" -- entity does not exist in design
     Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity regFlag -section_id "Root Region" was ignored
     Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity regFlag -section_id "Root Region" was ignored
-Info: Implemented 185 device resources after synthesis - the final resource count might be different
-    Info: Implemented 63 input pins
-    Info: Implemented 61 output pins
-    Info: Implemented 61 logic cells
+Info: Implemented 191 device resources after synthesis - the final resource count might be different
+    Info: Implemented 65 input pins
+    Info: Implemented 63 output pins
+    Info: Implemented 63 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 170 megabytes
-    Info: Processing ended: Wed May 06 10:15:30 2026
-    Info: Elapsed time: 00:00:08
+    Info: Processing ended: Wed May 06 14:18:25 2026
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:04
 
 

@@ -16,10 +16,10 @@
 FUNCTION lpm_dff2 
 (
 	clock,
-	data[8..0],
+	data[10..0],
 	enable
 )
 
 RETURNS (
-	q[8..0]
+	q[10..0]
 );

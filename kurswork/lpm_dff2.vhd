@@ -43,16 +43,16 @@ ENTITY lpm_dff2 IS
 	PORT
 	(
 		clock		: IN STD_LOGIC ;
-		data		: IN STD_LOGIC_VECTOR (8 DOWNTO 0);
+		data		: IN STD_LOGIC_VECTOR (10 DOWNTO 0);
 		enable		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (8 DOWNTO 0)
+		q		: OUT STD_LOGIC_VECTOR (10 DOWNTO 0)
 	);
 END lpm_dff2;
 
 
 ARCHITECTURE SYN OF lpm_dff2 IS
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (8 DOWNTO 0);
+	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (10 DOWNTO 0);
 
 
 
@@ -65,19 +65,19 @@ ARCHITECTURE SYN OF lpm_dff2 IS
 	PORT (
 			enable	: IN STD_LOGIC ;
 			clock	: IN STD_LOGIC ;
-			q	: OUT STD_LOGIC_VECTOR (8 DOWNTO 0);
-			data	: IN STD_LOGIC_VECTOR (8 DOWNTO 0)
+			q	: OUT STD_LOGIC_VECTOR (10 DOWNTO 0);
+			data	: IN STD_LOGIC_VECTOR (10 DOWNTO 0)
 	);
 	END COMPONENT;
 
 BEGIN
-	q    <= sub_wire0(8 DOWNTO 0);
+	q    <= sub_wire0(10 DOWNTO 0);
 
 	lpm_ff_component : lpm_ff
 	GENERIC MAP (
 		lpm_fftype => "DFF",
 		lpm_type => "LPM_FF",
-		lpm_width => 9
+		lpm_width => 11
 	)
 	PORT MAP (
 		enable => enable,
@@ -106,18 +106,18 @@ END SYN;
 -- Retrieval info: PRIVATE: SSET_ALL1 NUMERIC "1"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 -- Retrieval info: PRIVATE: UseTFFdataPort NUMERIC "0"
--- Retrieval info: PRIVATE: nBit NUMERIC "9"
+-- Retrieval info: PRIVATE: nBit NUMERIC "11"
 -- Retrieval info: CONSTANT: LPM_FFTYPE STRING "DFF"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_FF"
--- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "9"
+-- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "11"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL clock
--- Retrieval info: USED_PORT: data 0 0 9 0 INPUT NODEFVAL data[8..0]
+-- Retrieval info: USED_PORT: data 0 0 11 0 INPUT NODEFVAL data[10..0]
 -- Retrieval info: USED_PORT: enable 0 0 0 0 INPUT NODEFVAL enable
--- Retrieval info: USED_PORT: q 0 0 9 0 OUTPUT NODEFVAL q[8..0]
+-- Retrieval info: USED_PORT: q 0 0 11 0 OUTPUT NODEFVAL q[10..0]
 -- Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
--- Retrieval info: CONNECT: q 0 0 9 0 @q 0 0 9 0
+-- Retrieval info: CONNECT: q 0 0 11 0 @q 0 0 11 0
 -- Retrieval info: CONNECT: @enable 0 0 0 0 enable 0 0 0 0
--- Retrieval info: CONNECT: @data 0 0 9 0 data 0 0 9 0
+-- Retrieval info: CONNECT: @data 0 0 11 0 data 0 0 11 0
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_dff2.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_dff2.inc TRUE

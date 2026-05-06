@@ -1,4 +1,4 @@
-Fitter Status : Successful - Wed May 06 10:15:38 2026
+Fitter Status : Successful - Wed May 06 14:18:33 2026
 Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
 Revision Name : kurswork
 Top-level Entity Name : cash_line
@@ -7,9 +7,9 @@ Device : EP2S15F484C3
 Timing Models : Final
 Logic utilization : < 1 %
     Combinational ALUTs : 0 / 12,480 ( 0 % )
-    Dedicated logic registers : 61 / 12,480 ( < 1 % )
-Total registers : 61
-Total pins : 124 / 343 ( 36 % )
+    Dedicated logic registers : 63 / 12,480 ( < 1 % )
+Total registers : 63
+Total pins : 128 / 343 ( 37 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 419,328 ( 0 % )
 DSP block 9-bit elements : 0 / 96 ( 0 % )
