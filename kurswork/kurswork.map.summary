@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed May 06 22:17:14 2026
+Analysis & Synthesis Status : Successful - Thu May 07 16:42:55 2026
 Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
 Revision Name : kurswork
-Top-level Entity Name : cash_line
+Top-level Entity Name : LRU_set
 Family : Stratix II
 Logic utilization : N/A
-    Combinational ALUTs : 17
-    Dedicated logic registers : 59
-Total registers : 59
-Total pins : 44
+    Combinational ALUTs : 181
+    Dedicated logic registers : 259
+Total registers : 259
+Total pins : 304
 Total virtual pins : 0
 Total block memory bits : 0
 DSP block 9-bit elements : 0

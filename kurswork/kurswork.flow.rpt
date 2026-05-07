@@ -1,5 +1,5 @@
 Flow report for kurswork
-Wed May 06 22:17:28 2026
+Thu May 07 16:43:13 2026
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Flow Summary                                                            ;
 +-------------------------------+-----------------------------------------+
-; Flow Status                   ; Successful - Wed May 06 22:17:28 2026   ;
+; Flow Status                   ; Successful - Thu May 07 16:43:13 2026   ;
 ; Quartus II Version            ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name                 ; kurswork                                ;
-; Top-level Entity Name         ; cash_line                               ;
+; Top-level Entity Name         ; LRU_set                                 ;
 ; Family                        ; Stratix II                              ;
 ; Met timing requirements       ; Yes                                     ;
-; Logic utilization             ; < 1 %                                   ;
-;     Combinational ALUTs       ; 17 / 12,480 ( < 1 % )                   ;
-;     Dedicated logic registers ; 59 / 12,480 ( < 1 % )                   ;
-; Total registers               ; 59                                      ;
-; Total pins                    ; 44 / 343 ( 13 % )                       ;
+; Logic utilization             ; 3 %                                     ;
+;     Combinational ALUTs       ; 182 / 12,480 ( 1 % )                    ;
+;     Dedicated logic registers ; 269 / 12,480 ( 2 % )                    ;
+; Total registers               ; 269                                     ;
+; Total pins                    ; 304 / 343 ( 89 % )                      ;
 ; Total virtual pins            ; 0                                       ;
 ; Total block memory bits       ; 0 / 419,328 ( 0 % )                     ;
 ; DSP block 9-bit elements      ; 0 / 96 ( 0 % )                          ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/06/2026 22:17:05 ;
+; Start date & time ; 05/07/2026 16:42:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; kurswork            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 22072698233033.177809502500236 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 22072698233033.177816136003100 ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_FF                         ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_DECODE                     ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_MUX                        ; --            ; --          ; --             ;
@@ -111,6 +111,16 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                       ; LPM_DECODE                     ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_DECODE                     ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_MUX                        ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                    ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_MUX                        ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_MUX                        ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_FF                         ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_FF                         ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                            ; --            ; --          ; --             ;
@@ -216,9 +226,19 @@ applicable agreement for further details.
 ; MISC_FILE                          ; lpm_decode4.inc                ; --            ; --          ; --             ;
 ; MISC_FILE                          ; lpm_mux7.bsf                   ; --            ; --          ; --             ;
 ; MISC_FILE                          ; lpm_mux7.inc                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                    ; 16764057                       ; --            ; cash_line   ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                         ; --            ; cash_line   ; Top            ;
-; TOP_LEVEL_ENTITY                   ; cash_line                      ; kurswork      ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter2.bsf               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter2.inc               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux8.bsf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux8.inc                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux9.bsf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux9.inc                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_dff4.bsf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_dff4.inc                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_dff5.bsf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_dff5.inc                   ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                       ; --            ; LRU_set     ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                         ; --            ; LRU_set     ; Top            ;
+; TOP_LEVEL_ENTITY                   ; LRU_set                        ; kurswork      ; --          ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                            ; --            ; --          ; eda_blast_fpga ;
 +------------------------------------+--------------------------------+---------------+-------------+----------------+
 
@@ -228,11 +248,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:10     ; 1.0                     ; 174 MB              ; 00:00:05                           ;
-; Fitter                  ; 00:00:08     ; 1.0                     ; 174 MB              ; 00:00:05                           ;
-; Assembler               ; 00:00:02     ; 1.0                     ; 166 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 88 MB               ; 00:00:00                           ;
-; Total                   ; 00:00:21     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis    ; 00:00:15     ; 1.0                     ; 181 MB              ; 00:00:08                           ;
+; Fitter                  ; 00:00:11     ; 1.0                     ; 183 MB              ; 00:00:07                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 163 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 89 MB               ; 00:00:00                           ;
+; Total                   ; 00:00:29     ; --                      ; --                  ; 00:00:16                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

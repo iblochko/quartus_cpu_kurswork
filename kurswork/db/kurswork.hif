@@ -1355,6 +1355,12 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
+# hierarchies {
+lpm_bustri1:inst92
+lpm_bustri1:inst96
+lpm_bustri1:inst94
+lpm_bustri1:inst90
+}
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
@@ -1387,6 +1393,12 @@ enabledt
 data0
 -1
 3
+}
+# hierarchies {
+lpm_bustri1:inst92|lpm_bustri:lpm_bustri_component
+lpm_bustri1:inst96|lpm_bustri:lpm_bustri_component
+lpm_bustri1:inst94|lpm_bustri:lpm_bustri_component
+lpm_bustri1:inst90|lpm_bustri:lpm_bustri_component
 }
 # macro_sequence
 
@@ -1555,6 +1567,9 @@ data1
 data0
 -1
 3
+}
+# hierarchies {
+lpm_decode3:inst57|lpm_decode:lpm_decode_component|decode_u7f:auto_generated
 }
 # macro_sequence
 
@@ -9853,10 +9868,22 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-lpm_dff3:inst1
-lpm_dff3:inst2
-lpm_dff3:inst3
-lpm_dff3:inst4
+cash_line:inst31|lpm_dff3:inst1
+cash_line:inst31|lpm_dff3:inst2
+cash_line:inst31|lpm_dff3:inst3
+cash_line:inst31|lpm_dff3:inst4
+cash_line:inst32|lpm_dff3:inst1
+cash_line:inst32|lpm_dff3:inst2
+cash_line:inst32|lpm_dff3:inst3
+cash_line:inst32|lpm_dff3:inst4
+cash_line:inst33|lpm_dff3:inst1
+cash_line:inst33|lpm_dff3:inst2
+cash_line:inst33|lpm_dff3:inst3
+cash_line:inst33|lpm_dff3:inst4
+cash_line:inst34|lpm_dff3:inst1
+cash_line:inst34|lpm_dff3:inst2
+cash_line:inst34|lpm_dff3:inst3
+cash_line:inst34|lpm_dff3:inst4
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -10003,10 +10030,22 @@ clock
 3
 }
 # hierarchies {
-lpm_dff3:inst1|lpm_ff:lpm_ff_component
-lpm_dff3:inst2|lpm_ff:lpm_ff_component
-lpm_dff3:inst3|lpm_ff:lpm_ff_component
-lpm_dff3:inst4|lpm_ff:lpm_ff_component
+cash_line:inst31|lpm_dff3:inst1|lpm_ff:lpm_ff_component
+cash_line:inst31|lpm_dff3:inst2|lpm_ff:lpm_ff_component
+cash_line:inst31|lpm_dff3:inst3|lpm_ff:lpm_ff_component
+cash_line:inst31|lpm_dff3:inst4|lpm_ff:lpm_ff_component
+cash_line:inst32|lpm_dff3:inst1|lpm_ff:lpm_ff_component
+cash_line:inst32|lpm_dff3:inst2|lpm_ff:lpm_ff_component
+cash_line:inst32|lpm_dff3:inst3|lpm_ff:lpm_ff_component
+cash_line:inst32|lpm_dff3:inst4|lpm_ff:lpm_ff_component
+cash_line:inst33|lpm_dff3:inst1|lpm_ff:lpm_ff_component
+cash_line:inst33|lpm_dff3:inst2|lpm_ff:lpm_ff_component
+cash_line:inst33|lpm_dff3:inst3|lpm_ff:lpm_ff_component
+cash_line:inst33|lpm_dff3:inst4|lpm_ff:lpm_ff_component
+cash_line:inst34|lpm_dff3:inst1|lpm_ff:lpm_ff_component
+cash_line:inst34|lpm_dff3:inst2|lpm_ff:lpm_ff_component
+cash_line:inst34|lpm_dff3:inst3|lpm_ff:lpm_ff_component
+cash_line:inst34|lpm_dff3:inst4|lpm_ff:lpm_ff_component
 }
 # macro_sequence
 
@@ -10137,36 +10176,6 @@ clock
 -1
 3
 }
-# macro_sequence
-
-# end
-# entity
-lpm_mux6
-# storage
-db|kurswork.(89).cnf
-db|kurswork.(89).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-lpm_mux6.vhd
-495b79b11536889933bd5a56e42532
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# lmf
-c:|altera|91|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
@@ -11815,36 +11824,6 @@ data0
 
 # end
 # entity
-lpm_compare5
-# storage
-db|kurswork.(92).cnf
-db|kurswork.(92).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-lpm_compare5.vhd
-c7476f5162e90f29867893c377eaa28
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# lmf
-c:|altera|91|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 lpm_compare
 # storage
 db|kurswork.(93).cnf
@@ -11954,6 +11933,12 @@ AeB
 -1
 3
 }
+# hierarchies {
+lpm_compare5:inst36|lpm_compare:lpm_compare_component
+lpm_compare5:inst38|lpm_compare:lpm_compare_component
+lpm_compare5:inst37|lpm_compare:lpm_compare_component
+lpm_compare5:inst35|lpm_compare:lpm_compare_component
+}
 # macro_sequence
 
 # end
@@ -12005,6 +11990,12 @@ aeb
 -1
 3
 }
+# hierarchies {
+lpm_compare5:inst36|lpm_compare:lpm_compare_component|cmpr_20h:auto_generated
+lpm_compare5:inst38|lpm_compare:lpm_compare_component|cmpr_20h:auto_generated
+lpm_compare5:inst37|lpm_compare:lpm_compare_component|cmpr_20h:auto_generated
+lpm_compare5:inst35|lpm_compare:lpm_compare_component|cmpr_20h:auto_generated
+}
 # macro_sequence
 
 # end
@@ -12031,6 +12022,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+lpm_decode2:inst30
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -12111,7 +12105,11 @@ data0
 3
 }
 # hierarchies {
-lpm_decode4:inst5|lpm_decode:lpm_decode_component
+cash_line:inst31|lpm_decode4:inst5|lpm_decode:lpm_decode_component
+lpm_decode2:inst30|lpm_decode:lpm_decode_component
+cash_line:inst32|lpm_decode4:inst5|lpm_decode:lpm_decode_component
+cash_line:inst33|lpm_decode4:inst5|lpm_decode:lpm_decode_component
+cash_line:inst34|lpm_decode4:inst5|lpm_decode:lpm_decode_component
 }
 # macro_sequence
 
@@ -12147,7 +12145,11 @@ data0
 3
 }
 # hierarchies {
-lpm_decode4:inst5|lpm_decode:lpm_decode_component|decode_p7f:auto_generated
+cash_line:inst31|lpm_decode4:inst5|lpm_decode:lpm_decode_component|decode_p7f:auto_generated
+lpm_decode2:inst30|lpm_decode:lpm_decode_component|decode_p7f:auto_generated
+cash_line:inst32|lpm_decode4:inst5|lpm_decode:lpm_decode_component|decode_p7f:auto_generated
+cash_line:inst33|lpm_decode4:inst5|lpm_decode:lpm_decode_component|decode_p7f:auto_generated
+cash_line:inst34|lpm_decode4:inst5|lpm_decode:lpm_decode_component|decode_p7f:auto_generated
 }
 # macro_sequence
 
@@ -12175,6 +12177,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+lpm_mux5:inst29
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -12257,6 +12262,10 @@ DATA0_0
 -1
 3
 }
+# hierarchies {
+lpm_mux5:inst29|lpm_mux:lpm_mux_component
+lpm_mux8:inst69|lpm_mux:lpm_mux_component
+}
 # macro_sequence
 
 # end
@@ -12293,6 +12302,10 @@ data0
 -1
 3
 }
+# hierarchies {
+lpm_mux5:inst29|lpm_mux:lpm_mux_component|mux_34e:auto_generated
+lpm_mux8:inst69|lpm_mux:lpm_mux_component|mux_34e:auto_generated
+}
 # macro_sequence
 
 # end
@@ -12319,6 +12332,11 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+lpm_compare4:inst9
+lpm_compare4:inst5
+lpm_compare4:inst6
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -12427,6 +12445,11 @@ AleB
 -1
 3
 }
+# hierarchies {
+lpm_compare4:inst9|lpm_compare:lpm_compare_component
+lpm_compare4:inst5|lpm_compare:lpm_compare_component
+lpm_compare4:inst6|lpm_compare:lpm_compare_component
+}
 # macro_sequence
 
 # end
@@ -12469,6 +12492,11 @@ aleb
 -1
 3
 }
+# hierarchies {
+lpm_compare4:inst9|lpm_compare:lpm_compare_component|cmpr_nlg:auto_generated
+lpm_compare4:inst5|lpm_compare:lpm_compare_component|cmpr_nlg:auto_generated
+lpm_compare4:inst6|lpm_compare:lpm_compare_component|cmpr_nlg:auto_generated
+}
 # macro_sequence
 
 # end
@@ -12495,6 +12523,11 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+lpm_mux4:inst7
+lpm_mux4:inst8
+lpm_mux4:inst10
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -12595,6 +12628,11 @@ DATA0_0
 -1
 3
 }
+# hierarchies {
+lpm_mux4:inst7|lpm_mux:lpm_mux_component
+lpm_mux4:inst8|lpm_mux:lpm_mux_component
+lpm_mux4:inst10|lpm_mux:lpm_mux_component
+}
 # macro_sequence
 
 # end
@@ -12649,6 +12687,11 @@ data0
 -1
 3
 }
+# hierarchies {
+lpm_mux4:inst7|lpm_mux:lpm_mux_component|mux_54e:auto_generated
+lpm_mux4:inst8|lpm_mux:lpm_mux_component|mux_54e:auto_generated
+lpm_mux4:inst10|lpm_mux:lpm_mux_component|mux_54e:auto_generated
+}
 # macro_sequence
 
 # end
@@ -12675,6 +12718,12 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+lpm_counter1:inst3
+lpm_counter1:inst2
+lpm_counter1:inst
+lpm_counter1:inst1
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -12789,6 +12838,12 @@ clock
 -1
 3
 }
+# hierarchies {
+lpm_counter1:inst3|lpm_counter:lpm_counter_component
+lpm_counter1:inst2|lpm_counter:lpm_counter_component
+lpm_counter1:inst|lpm_counter:lpm_counter_component
+lpm_counter1:inst1|lpm_counter:lpm_counter_component
+}
 # macro_sequence
 
 # end
@@ -12825,6 +12880,12 @@ clock
 -1
 3
 }
+# hierarchies {
+lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_5pi:auto_generated
+lpm_counter1:inst2|lpm_counter:lpm_counter_component|cntr_5pi:auto_generated
+lpm_counter1:inst|lpm_counter:lpm_counter_component|cntr_5pi:auto_generated
+lpm_counter1:inst1|lpm_counter:lpm_counter_component|cntr_5pi:auto_generated
+}
 # macro_sequence
 
 # end
@@ -12853,7 +12914,10 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-lpm_dff2:inst
+cash_line:inst31|lpm_dff2:inst
+cash_line:inst32|lpm_dff2:inst
+cash_line:inst33|lpm_dff2:inst
+cash_line:inst34|lpm_dff2:inst
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -12964,7 +13028,10 @@ clock
 3
 }
 # hierarchies {
-lpm_dff2:inst|lpm_ff:lpm_ff_component
+cash_line:inst31|lpm_dff2:inst|lpm_ff:lpm_ff_component
+cash_line:inst32|lpm_dff2:inst|lpm_ff:lpm_ff_component
+cash_line:inst33|lpm_dff2:inst|lpm_ff:lpm_ff_component
+cash_line:inst34|lpm_dff2:inst|lpm_ff:lpm_ff_component
 }
 # macro_sequence
 
@@ -12994,31 +13061,14 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-lpm_decode4:inst5
+cash_line:inst31|lpm_decode4:inst5
+cash_line:inst32|lpm_decode4:inst5
+cash_line:inst33|lpm_decode4:inst5
+cash_line:inst34|lpm_decode4:inst5
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-cash_line
-# storage
-db|kurswork.(59).cnf
-db|kurswork.(59).cnf
-# case_insensitive
-# source_file
-cash_line.bdf
-b9f964c9394f66f7136e6fbd1237199
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
 # macro_sequence
 
 # end
@@ -13047,7 +13097,10 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-lpm_mux7:inst10
+cash_line:inst31|lpm_mux7:inst10
+cash_line:inst32|lpm_mux7:inst10
+cash_line:inst33|lpm_mux7:inst10
+cash_line:inst34|lpm_mux7:inst10
 }
 # lmf
 c:|altera|91|quartus|lmf|maxplus2.lmf
@@ -13311,7 +13364,11 @@ DATA0_0
 3
 }
 # hierarchies {
-lpm_mux7:inst10|lpm_mux:lpm_mux_component
+cash_line:inst31|lpm_mux7:inst10|lpm_mux:lpm_mux_component
+cash_line:inst32|lpm_mux7:inst10|lpm_mux:lpm_mux_component
+cash_line:inst33|lpm_mux7:inst10|lpm_mux:lpm_mux_component
+cash_line:inst34|lpm_mux7:inst10|lpm_mux:lpm_mux_component
+lpm_mux6:inst4|lpm_mux:lpm_mux_component
 }
 # macro_sequence
 
@@ -13530,7 +13587,1006 @@ data0
 3
 }
 # hierarchies {
-lpm_mux7:inst10|lpm_mux:lpm_mux_component|mux_o5e:auto_generated
+cash_line:inst31|lpm_mux7:inst10|lpm_mux:lpm_mux_component|mux_o5e:auto_generated
+cash_line:inst32|lpm_mux7:inst10|lpm_mux:lpm_mux_component|mux_o5e:auto_generated
+cash_line:inst33|lpm_mux7:inst10|lpm_mux:lpm_mux_component|mux_o5e:auto_generated
+cash_line:inst34|lpm_mux7:inst10|lpm_mux:lpm_mux_component|mux_o5e:auto_generated
+lpm_mux6:inst4|lpm_mux:lpm_mux_component|mux_o5e:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+lpm_mux6
+# storage
+db|kurswork.(114).cnf
+db|kurswork.(114).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_mux6.vhd
+5ed7be66c7750129bc4b595fedcb5c3
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_mux6:inst4
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_decode3
+# storage
+db|kurswork.(115).cnf
+db|kurswork.(115).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_decode3.vhd
+4ad2609011db4c8c6975d3a28c6a7cd4
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_decode3:inst57
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_decode
+# storage
+db|kurswork.(116).cnf
+db|kurswork.(116).cnf
+# case_insensitive
+# source_file
+c:|altera|91|quartus|libraries|megafunctions|lpm_decode.tdf
+bfce37ee9af3768dda7316c867798b
+7
+# user_parameter {
+LPM_WIDTH
+3
+PARAMETER_SIGNED_DEC
+USR
+LPM_DECODES
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+decode_u7f
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+eq5
+-1
+3
+eq4
+-1
+3
+eq3
+-1
+3
+eq2
+-1
+3
+eq1
+-1
+3
+eq0
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+lpm_decode3:inst57|lpm_decode:lpm_decode_component
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter
+# storage
+db|kurswork.(118).cnf
+db|kurswork.(118).cnf
+# case_insensitive
+# source_file
+c:|altera|91|quartus|libraries|megafunctions|lpm_counter.tdf
+ea80917e5f6a67b6043b433538e1f4b
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+2
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+3
+PARAMETER_SIGNED_DEC
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_b3k
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+cntr_b3k
+# storage
+db|kurswork.(119).cnf
+db|kurswork.(119).cnf
+# case_insensitive
+# source_file
+db|cntr_b3k.tdf
+f9fcf25f6daea1166c2a25f14bbdb431
+7
+# used_port {
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+cmpr_8dc
+# storage
+db|kurswork.(120).cnf
+db|kurswork.(120).cnf
+# case_insensitive
+# source_file
+db|cmpr_8dc.tdf
+63ff516d7e85791796b826c3b1f5a9b4
+7
+# used_port {
+datab1
+-1
+3
+datab0
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+aeb
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+lpm_mux9
+# storage
+db|kurswork.(121).cnf
+db|kurswork.(121).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_mux9.vhd
+f4227a9eca82c0a0ba7af610fe7d1a61
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_mux9:inst87
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+LPM_MUX
+# storage
+db|kurswork.(122).cnf
+db|kurswork.(122).cnf
+# case_insensitive
+# source_file
+c:|altera|91|quartus|libraries|megafunctions|lpm_mux.tdf
+6d934745c6425cfea49663777ccdec
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+1
+PARAMETER_SIGNED_DEC
+USR
+LPM_SIZE
+4
+PARAMETER_SIGNED_DEC
+USR
+LPM_WIDTHS
+2
+PARAMETER_SIGNED_DEC
+USR
+LPM_PIPELINE
+0
+PARAMETER_SIGNED_DEC
+USR
+CBXI_PARAMETER
+mux_64e
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+SEL1
+-1
+3
+SEL0
+-1
+3
+RESULT0
+-1
+3
+DATA3_0
+-1
+3
+DATA2_0
+-1
+3
+DATA1_0
+-1
+3
+DATA0_0
+-1
+3
+}
+# hierarchies {
+lpm_mux9:inst87|lpm_mux:lpm_mux_component
+}
+# macro_sequence
+
+# end
+# entity
+mux_64e
+# storage
+db|kurswork.(123).cnf
+db|kurswork.(123).cnf
+# case_insensitive
+# source_file
+db|mux_64e.tdf
+707b7a68154faf489b8ec2798a089ae
+7
+# used_port {
+sel1
+-1
+3
+sel0
+-1
+3
+result0
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+lpm_mux9:inst87|lpm_mux:lpm_mux_component|mux_64e:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+lpm_mux8
+# storage
+db|kurswork.(124).cnf
+db|kurswork.(124).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_mux8.vhd
+fe8884aaf9add843d46228674a4d5aa
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_mux8:inst69
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_dff4
+# storage
+db|kurswork.(125).cnf
+db|kurswork.(125).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_dff4.vhd
+8baf4810a7da8de22ea92493188dbeb
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_dff4:inst88
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_ff
+# storage
+db|kurswork.(126).cnf
+db|kurswork.(126).cnf
+# case_insensitive
+# source_file
+c:|altera|91|quartus|libraries|megafunctions|lpm_ff.tdf
+46b042d3fd5eb2f17a9dfd3891afd1a
+7
+# user_parameter {
+LPM_WIDTH
+3
+PARAMETER_SIGNED_DEC
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_FFTYPE
+DFF
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+lpm_dff4:inst88|lpm_ff:lpm_ff_component
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter2
+# storage
+db|kurswork.(117).cnf
+db|kurswork.(117).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_counter2.vhd
+162eb5e80dd5355d8571d64893d5ae
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_counter2:inst66
+lpm_counter2:inst65
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_counter
+# storage
+db|kurswork.(127).cnf
+db|kurswork.(127).cnf
+# case_insensitive
+# source_file
+c:|altera|91|quartus|libraries|megafunctions|lpm_counter.tdf
+ea80917e5f6a67b6043b433538e1f4b
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+2
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_api
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+lpm_counter2:inst66|lpm_counter:lpm_counter_component
+lpm_counter2:inst65|lpm_counter:lpm_counter_component
+}
+# macro_sequence
+
+# end
+# entity
+cntr_api
+# storage
+db|kurswork.(128).cnf
+db|kurswork.(128).cnf
+# case_insensitive
+# source_file
+db|cntr_api.tdf
+d39de8e0238f9b454f1c3432141aa93
+7
+# used_port {
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+lpm_counter2:inst66|lpm_counter:lpm_counter_component|cntr_api:auto_generated
+lpm_counter2:inst65|lpm_counter:lpm_counter_component|cntr_api:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+cash_line
+# storage
+db|kurswork.(59).cnf
+db|kurswork.(59).cnf
+# case_insensitive
+# source_file
+cash_line.bdf
+5860dde43d8ef6ea691bcb5e3987fefb
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+cash_line:inst31
+cash_line:inst32
+cash_line:inst33
+cash_line:inst34
+}
+# macro_sequence
+
+# end
+# entity
+lpm_compare5
+# storage
+db|kurswork.(92).cnf
+db|kurswork.(92).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_compare5.vhd
+bf8cf2d21984df0e550f5c471811ed4
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_compare5:inst36
+lpm_compare5:inst38
+lpm_compare5:inst37
+lpm_compare5:inst35
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_dff5
+# storage
+db|kurswork.(129).cnf
+db|kurswork.(129).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_dff5.vhd
+6088ea3c1bcc7cc93b9ed329ff2267e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_dff5:inst19
+}
+# lmf
+c:|altera|91|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_ff
+# storage
+db|kurswork.(130).cnf
+db|kurswork.(130).cnf
+# case_insensitive
+# source_file
+c:|altera|91|quartus|libraries|megafunctions|lpm_ff.tdf
+46b042d3fd5eb2f17a9dfd3891afd1a
+7
+# user_parameter {
+LPM_WIDTH
+4
+PARAMETER_SIGNED_DEC
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_FFTYPE
+DFF
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+enable
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+lpm_dff5:inst19|lpm_ff:lpm_ff_component
+}
+# macro_sequence
+
+# end
+# entity
+LRU_set
+# storage
+db|kurswork.(89).cnf
+db|kurswork.(89).cnf
+# case_insensitive
+# source_file
+lru_set.bdf
+b35932678a84dc2729f51d212dc1d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
 }
 # macro_sequence
 

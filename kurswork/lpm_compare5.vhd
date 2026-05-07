@@ -102,7 +102,7 @@ END SYN;
 -- Retrieval info: PRIVATE: AltB NUMERIC "0"
 -- Retrieval info: PRIVATE: AneB NUMERIC "1"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Stratix II"
--- Retrieval info: PRIVATE: LPM_PIPELINE NUMERIC "0"
+-- Retrieval info: PRIVATE: LPM_PIPELINE NUMERIC "1"
 -- Retrieval info: PRIVATE: Latency NUMERIC "0"
 -- Retrieval info: PRIVATE: PortBValue NUMERIC "0"
 -- Retrieval info: PRIVATE: Radix NUMERIC "10"
